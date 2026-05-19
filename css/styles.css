@@ -1,5 +1,5 @@
 /* =============================================
-   WISE HABIT AGENCY — Shared Styles
+   WISE HABIT AGENCY â Shared Styles
    ============================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
@@ -245,8 +245,8 @@ a {
 .hero {
   background: var(--black);
   color: var(--white);
-  padding: 100px 40px 80px;
-  min-height: 60vh;
+  padding: 120px 40px 100px;
+  min-height: 72vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -634,47 +634,55 @@ a {
   transition: transform 0.5s ease;
 }
 
+/* Full-width slide: image left 65%, content right 35% */
 .portfolio-slide {
-  min-width: 55%;
-  padding-right: 2px;
+  min-width: 100%;
   flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 65% 35%;
 }
 
 .portfolio-slide__img {
   width: 100%;
-  aspect-ratio: 4/3;
+  height: 520px;
   object-fit: cover;
   display: block;
 }
 
 .portfolio-slide__content {
-  padding: 28px 40px 28px 0;
+  padding: 60px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--white);
+  border-left: 1px solid var(--gray-mid);
 }
 
 .portfolio-slide__title {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  line-height: 1.2;
 }
 
 .portfolio-slide__meta {
   font-size: 13px;
-  opacity: 0.6;
-  margin-bottom: 12px;
-  line-height: 1.8;
+  opacity: 0.55;
+  margin-bottom: 16px;
+  line-height: 1.9;
 }
 
 .portfolio-slide__meta strong {
   font-weight: 500;
   opacity: 1;
+  color: var(--black);
 }
 
 .portfolio-slide__desc {
   font-size: 14px;
-  line-height: 1.7;
-  opacity: 0.7;
-  max-width: 500px;
+  line-height: 1.75;
+  opacity: 0.65;
 }
 
 .portfolio__controls {
@@ -786,16 +794,30 @@ a {
   list-style: none;
   display: flex;
   flex-direction: column;
+  counter-reset: numbered-item;
 }
 
 .numbered-list li {
+  counter-increment: numbered-item;
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  padding: 20px 0;
+  gap: 24px;
+  padding: 22px 0;
   border-bottom: 1px solid var(--gray-mid);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6;
+}
+
+/* Auto-generate number prefix via CSS counter */
+.numbered-list li::before {
+  content: counter(numbered-item) " â";
+  font-family: var(--font-heading);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  opacity: 0.35;
+  min-width: 36px;
+  flex-shrink: 0;
+  padding-top: 2px;
 }
 
 .section--black .numbered-list li {
@@ -810,6 +832,7 @@ a {
   border-top-color: rgba(255,255,255,0.1);
 }
 
+/* Legacy .num span support (for index.html facts slider) */
 .numbered-list li .num {
   font-family: var(--font-heading);
   font-size: 12px;
@@ -1339,7 +1362,18 @@ a {
   }
 
   .portfolio-slide {
-    min-width: 90%;
+    min-width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-slide__img {
+    height: 280px;
+  }
+
+  .portfolio-slide__content {
+    padding: 28px 20px 36px;
+    border-left: none;
+    border-top: 1px solid var(--gray-mid);
   }
 
   .library-section {
