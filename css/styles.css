@@ -1448,3 +1448,389 @@ a {
     padding: 60px 20px;
   }
 }
+
+/* =============================================
+   CONFERENCE PAGE COMPONENTS
+   ============================================= */
+
+/* Date badge */
+.date-badge {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 6px 16px;
+  margin-bottom: 32px;
+  opacity: 0.8;
+}
+
+/* Conference questions list */
+.conference-questions {
+  list-style: none;
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.conference-questions li {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-mid);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 24px;
+  position: relative;
+}
+
+.conference-questions li::before {
+  content: 'â';
+  position: absolute;
+  left: 0;
+  opacity: 0.4;
+}
+
+.conference-questions li:first-child {
+  border-top: 1px solid var(--gray-mid);
+}
+
+/* Speakers grid */
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--gray-mid);
+  border: 1px solid var(--gray-mid);
+  margin-top: 32px;
+}
+
+.speaker-card {
+  background: var(--white);
+  overflow: hidden;
+}
+
+.speaker-card__img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter 0.3s;
+}
+
+.speaker-card:hover .speaker-card__img {
+  filter: grayscale(0%);
+}
+
+.speaker-card__info {
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--gray-mid);
+}
+
+.speaker-card__name {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.speaker-card__role {
+  font-size: 12px;
+  opacity: 0.5;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+
+/* Speaker section header */
+.speakers-section__tag {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 8px;
+  margin-top: 48px;
+}
+
+.speakers-section__tag:first-child {
+  margin-top: 0;
+}
+
+/* Program timeline */
+.program-block {
+  margin-bottom: 48px;
+}
+
+.program-block__title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 16px 0;
+  border-bottom: 2px solid var(--black);
+  margin-bottom: 0;
+}
+
+.program-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--gray-mid);
+  align-items: start;
+}
+
+.program-item--break {
+  background: var(--gray-light);
+  padding: 20px 16px;
+  margin: 0 -16px;
+}
+
+.program-item__time {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+  padding-top: 2px;
+}
+
+.program-item__title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.program-item__speakers {
+  font-size: 13px;
+  opacity: 0.55;
+}
+
+/* Sponsors grid */
+.sponsors-section {
+  padding: 60px 40px;
+  border-top: 1px solid var(--gray-mid);
+}
+
+.sponsors-section__subtitle {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.sponsors-section__subtitle:first-of-type {
+  margin-top: 0;
+}
+
+.sponsors-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.sponsors-row img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: opacity 0.2s, filter 0.2s;
+}
+
+.sponsors-row img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Venue info */
+.venue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 32px;
+}
+
+.venue-address__title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.venue-address__text {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Ticket card */
+.ticket-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: start;
+  padding: 48px;
+  border: 1px solid rgba(255,255,255,0.15);
+  margin-top: 40px;
+}
+
+.ticket-card__img {
+  width: 200px;
+  object-fit: contain;
+}
+
+.ticket-card__title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.ticket-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.ticket-card__list li {
+  font-size: 14px;
+  opacity: 0.7;
+  padding-left: 20px;
+  position: relative;
+}
+
+.ticket-card__list li::before {
+  content: 'â';
+  position: absolute;
+  left: 0;
+  opacity: 0.6;
+}
+
+/* Conference info boxes */
+.info-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--gray-mid);
+  border: 1px solid var(--gray-mid);
+  margin-top: 40px;
+}
+
+.info-box {
+  background: var(--white);
+  padding: 36px 32px;
+}
+
+.info-box__title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.info-box__text {
+  font-size: 14px;
+  line-height: 1.75;
+  opacity: 0.7;
+}
+
+.info-box__list {
+  list-style: none;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-box__list li {
+  font-size: 14px;
+  opacity: 0.7;
+  padding-left: 16px;
+  position: relative;
+}
+
+.info-box__list li::before {
+  content: 'â';
+  position: absolute;
+  left: 0;
+  opacity: 0.4;
+}
+
+/* Conference contact box */
+.conf-contact {
+  padding: 48px 40px;
+  background: var(--black);
+  color: var(--white);
+}
+
+.conf-contact__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.conf-contact__block-title {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 12px;
+}
+
+.conf-contact__block-text {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.75;
+}
+
+.conf-contact__block-text a {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .program-item {
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+  }
+
+  .ticket-card {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+  }
+
+  .ticket-card__img {
+    width: 140px;
+  }
+
+  .info-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .conf-contact__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sponsors-section {
+    padding: 48px 20px;
+  }
+}
