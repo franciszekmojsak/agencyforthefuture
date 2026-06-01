@@ -336,8 +336,38 @@
       <div class="contact-wrap__inner">
         <p class="contact-wrap__label">contact</p>
         <h2 class="contact-wrap__title">get in touch</h2>
-        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-        <div class="elfsight-app-49a9edd0-bc2b-4e07-806a-eb40737b8aac" data-elfsight-app-lazy></div>
+
+        <!-- Formspree — zamień YOUR_FORM_ID na swoje ID z formspree.io -->
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label for="cf-company">company</label>
+              <input type="text" id="cf-company" name="company" placeholder="Your company" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">email</label>
+            <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What can we help you with?" />
+          </div>
+          <div class="form-field">
+            <label for="cf-message">message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="cf-consent" name="consent" required />
+            <label for="cf-consent">I agree to the processing of my personal data for the purpose of responding to my inquiry.</label>
+          </div>
+          <button type="submit" class="btn btn--filled form-submit">send message →</button>
+        </form>
+
       </div>
     </section>
 
@@ -384,7 +414,36 @@
   <div class="inTouchModal" id="inTouchModal">
     <div class="modal-content">
       <button class="modal-close" id="closeModal">×</button>
-      <div class="elfsight-app-49a9edd0-bc2b-4e07-806a-eb40737b8aac" data-elfsight-app-lazy></div>
+      <h2>get in touch</h2>
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="m-name">name</label>
+            <input type="text" id="m-name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-field">
+            <label for="m-company">company</label>
+            <input type="text" id="m-company" name="company" placeholder="Your company" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="m-email">email</label>
+          <input type="email" id="m-email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-field">
+          <label for="m-subject">subject</label>
+          <input type="text" id="m-subject" name="subject" placeholder="What can we help you with?" />
+        </div>
+        <div class="form-field">
+          <label for="m-message">message</label>
+          <textarea id="m-message" name="message" placeholder="Tell us about your project..."></textarea>
+        </div>
+        <div class="form-consent">
+          <input type="checkbox" id="m-consent" name="consent" required />
+          <label for="m-consent">I agree to the processing of my personal data for the purpose of responding to my inquiry.</label>
+        </div>
+        <button type="submit" class="btn btn--filled form-submit">send message →</button>
+      </form>
     </div>
   </div>
 
