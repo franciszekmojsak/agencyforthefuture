@@ -9,14 +9,14 @@
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- NAVIGATION — white bg, dark text -->
   <nav class="nav">
     <div class="nav__logo">
-      <a href="index.html">
-        <img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Wise Habit Agency" />
+      <a class="nav__logo-agency" href="index.html">
+        <img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Agency for the Future" />
       </a>
-      <a href="https://wisehabit.com" target="_blank">
-        <img class="nav__logo-wh" src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" />
+      <a class="nav__logo-wh" href="https://wisehabit.com" target="_blank">
+        <img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" />
       </a>
     </div>
     <ul class="nav__links">
@@ -32,7 +32,6 @@
       <li><a href="archisnob.html">archisnob</a></li>
       <li><a href="library.html">library</a></li>
       <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">news</a></li>
-      <li><a href="conference.html">conference</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
     <div class="nav__hamburger" id="hamburger">
@@ -55,110 +54,136 @@
       <li><a href="archisnob.html">archisnob</a></li>
       <li><a href="library.html">library</a></li>
       <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">news</a></li>
-      <li><a href="conference.html">conference</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
   </div>
 
-  <!-- COLOR STRIP -->
+  <!-- COLOR STRIP — fixed under nav -->
   <div class="color-strip-wrapper">
     <div class="color-strip" id="colorStrip"></div>
   </div>
 
   <main class="page-content">
 
-    <!-- HERO -->
+    <!-- ═══════════════════════ HERO ═══════════════════════ -->
     <section class="hero">
       <p class="hero__eyebrow">agency for the future</p>
       <h1 class="hero__title">design for meanings,<br>feelings and business</h1>
       <p class="hero__sub">Holistic approach from idea to market-ready solution</p>
       <div class="hero__ctas">
-        <a href="#contact" class="btn btn--black">get in touch</a>
-        <a href="#learn-more" class="btn btn--ghost">learn more ↓</a>
+        <a href="#contact" class="btn btn--white">
+          get in touch
+          <img src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/Vector_2_5.svg" alt="" />
+        </a>
+        <a href="#learn-more" class="btn btn--ghost">
+          learn more
+          <img src="https://agency.wisehabit.com/data/include/cms/Agency/implementation/figma-test/Vector_2_2.png" alt="" style="filter:invert(1);height:10px;" />
+        </a>
       </div>
     </section>
 
-    <!-- INTRO CARDS -->
-    <section class="intro" id="learn-more">
-      <div class="intro__left">
-        <p class="intro__tag">agency for the future</p>
-        <h2 class="intro__title">created with empathy for the planet and mission to support the balance</h2>
-        <p class="intro__text">We employ design to create meaningful change. Our holistic approach connects people, products and the planet — from idea to market-ready solution.</p>
-      </div>
-      <div class="intro__right">
-        <div class="intro__card">
-          <h3 class="intro__card-title">Design services</h3>
-          <p class="intro__card-text">We employ diverse product solutions to enhance the sustainability &amp; circularity of design.</p>
-          <a href="design.html" class="intro__card-link">our services →</a>
+    <!-- ═══════════════════════ AGENCY INTRO — 3 cards ═══════════════════════ -->
+    <section class="agency-intro" id="learn-more">
+      <p class="agency-intro__eyebrow">agency for the future</p>
+      <h2 class="agency-intro__title">Created with empathy for the Planet<br>and mission to support the balance</h2>
+      <div class="agency-intro__cards">
+        <div class="intro-card">
+          <img class="intro-card__icon" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/design_services_ico_3.svg" alt="" />
+          <h3 class="intro-card__title">Design services</h3>
+          <p class="intro-card__text">We employ diverse product solutions to enhance the sustainability &amp; circularity of design.</p>
+          <a href="design.html" class="intro-card__link">
+            our services
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/design/figma-test/Vector_2_1.png" alt="" />
+          </a>
         </div>
-        <div class="intro__card">
-          <h3 class="intro__card-title">Library of materials</h3>
-          <p class="intro__card-text">Comprehensive collection of sustainable materials that considers various factors.</p>
-          <a href="library.html" class="intro__card-link">go to library →</a>
+        <div class="intro-card">
+          <img class="intro-card__icon" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/lib_of_mat_ico_4.svg" alt="" />
+          <h3 class="intro-card__title">Library of materials</h3>
+          <p class="intro-card__text">Comprehensive collection of sustainable materials that considers various factors.</p>
+          <a href="library.html" class="intro-card__link">
+            go to library
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/design/figma-test/Vector_2_1.png" alt="" />
+          </a>
         </div>
-        <div class="intro__card">
-          <h3 class="intro__card-title">Sustainability</h3>
-          <p class="intro__card-text">We aim to provide products that are not only well-designed but also prioritize sustainability.</p>
-          <a href="sustainability.html" class="intro__card-link">impact strategy →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FACTS / NUTSHELL -->
-    <section class="facts">
-      <div class="facts__header">
-        <p class="facts__tag">agency for the future — in a nutshell</p>
-        <h2 class="facts__title">why it works</h2>
-      </div>
-      <div class="facts__grid">
-        <div class="fact-item">
-          <p class="fact-item__num">01 —</p>
-          <p class="fact-item__text">Over <strong>20 years of entrepreneurs perspective</strong> enabling better understanding of business</p>
-        </div>
-        <div class="fact-item">
-          <p class="fact-item__num">02 —</p>
-          <p class="fact-item__text"><strong>Holistic approach</strong> from idea to product on the market</p>
-        </div>
-        <div class="fact-item">
-          <p class="fact-item__num">03 —</p>
-          <p class="fact-item__text">Design with <strong>sustainability in mind</strong>, approach with care of whole product life-cycle</p>
-        </div>
-        <div class="fact-item">
-          <p class="fact-item__num">04 —</p>
-          <p class="fact-item__text">Portfolio of designs with <strong>International Design Awards</strong> &amp; title of Designer of the Year 2023 by Polish Institute of Design</p>
-        </div>
-        <div class="fact-item">
-          <p class="fact-item__num">05 —</p>
-          <p class="fact-item__text"><strong>Empathetic understanding</strong> of client, user and other life forms involved in project</p>
-        </div>
-        <div class="fact-item">
-          <p class="fact-item__num">06 —</p>
-          <p class="fact-item__text">Library of Sustainable Materials features <strong>more than 40 European brands</strong></p>
-        </div>
-        <div class="fact-item">
-          <p class="fact-item__num">07 —</p>
-          <p class="fact-item__text"><strong>Diverse &amp; inclusive team</strong> build by professionals with adaptive mindset</p>
-        </div>
-        <div class="fact-item">
-          <p class="fact-item__num">08 —</p>
-          <p class="fact-item__text">Access to <strong>350 verified suppliers &amp; manufacturers</strong> with huge range of materials and techniques</p>
-        </div>
-        <div class="fact-item">
-          <p class="fact-item__num">09 —</p>
-          <p class="fact-item__text"><strong>Intellectual Property services</strong> to protect design and innovation</p>
+        <div class="intro-card">
+          <img class="intro-card__icon" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/STRZALKI_ico_2.svg" alt="" />
+          <h3 class="intro-card__title">Sustainability</h3>
+          <p class="intro-card__text">We aim to provide products that are not only well-designed but also prioritize sustainability.</p>
+          <a href="sustainability.html" class="intro-card__link">
+            impact strategy
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/design/figma-test/Vector_2_1.png" alt="" />
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- ═══════════════════════ NUTSHELL SLIDER ═══════════════════════ -->
+    <section class="nutshell">
+      <div class="nutshell__header">
+        <h2 class="nutshell__title">Agency for the Future — in a nutshell</h2>
+        <div class="nutshell__nav">
+          <button class="nutshell__btn" id="nutPrev" aria-label="Previous">
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/utils/prev_button-new.png" alt="←" />
+          </button>
+          <button class="nutshell__btn" id="nutNext" aria-label="Next">
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/utils/next_button-new.png" alt="→" />
+          </button>
+        </div>
+      </div>
+      <div class="nutshell__track-wrap">
+        <div class="nutshell__track" id="nutshellTrack">
+          <div class="nutshell__item">
+            <p class="nutshell__item-num">1 —</p>
+            <p class="nutshell__item-text">Over <strong>20 years of entrepreneurs perspective</strong> enabling better understanding of business</p>
+          </div>
+          <div class="nutshell__item">
+            <p class="nutshell__item-num">2 —</p>
+            <p class="nutshell__item-text"><strong>Holistic approach</strong> from idea to product on the market</p>
+          </div>
+          <div class="nutshell__item">
+            <p class="nutshell__item-num">3 —</p>
+            <p class="nutshell__item-text">Design with <strong>sustainability in mind</strong>, approach with care of whole product life-cycle</p>
+          </div>
+          <div class="nutshell__item">
+            <p class="nutshell__item-num">4 —</p>
+            <p class="nutshell__item-text">Portfolio of designs with <strong>International Design Awards</strong> &amp; title of Designer of the Year 2023 by Polish Institute of Design</p>
+          </div>
+          <div class="nutshell__item">
+            <p class="nutshell__item-num">5 —</p>
+            <p class="nutshell__item-text"><strong>Empathetic understanding</strong> of client, user and other life forms involved in project</p>
+          </div>
+          <div class="nutshell__item">
+            <p class="nutshell__item-num">6 —</p>
+            <p class="nutshell__item-text">Library of Sustainable Materials features <strong>more than 40 European brands</strong></p>
+          </div>
+          <div class="nutshell__item">
+            <p class="nutshell__item-num">7 —</p>
+            <p class="nutshell__item-text"><strong>Diverse &amp; inclusive team</strong> build by professionals with adaptive mindset</p>
+          </div>
+          <div class="nutshell__item">
+            <p class="nutshell__item-num">8 —</p>
+            <p class="nutshell__item-text">Access to <strong>350 verified suppliers &amp; manufacturers</strong> with huge range of materials and techniques</p>
+          </div>
+          <div class="nutshell__item">
+            <p class="nutshell__item-num">9 —</p>
+            <p class="nutshell__item-text"><strong>Intellectual Property</strong> services to protect design and innovation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ SERVICES ═══════════════════════ -->
     <section class="services">
       <div class="services__header">
-        <p class="services__tag">what we do</p>
-        <h2 class="services__title">we are convinced the change starts from design and designers</h2>
+        <p class="services__eyebrow">services</p>
+        <h2 class="services__title">We are convinced the change starts<br>from design and designers</h2>
       </div>
       <div class="services__grid">
         <div class="service-col">
-          <p class="service-col__title">Design</p>
+          <div class="service-col__head">
+            <p class="service-col__title">Design</p>
+            <a href="design.html"><img class="service-col__arrow" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/Vector_17_3.svg" alt="→" /></a>
+          </div>
           <ul class="service-col__list">
             <li>Product Research &amp; Strategy</li>
             <li>Circular Design Strategies</li>
@@ -169,7 +194,10 @@
           </ul>
         </div>
         <div class="service-col">
-          <p class="service-col__title">Strategy</p>
+          <div class="service-col__head">
+            <p class="service-col__title">Strategy</p>
+            <a href="design.html"><img class="service-col__arrow" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/Vector_17_3.svg" alt="→" /></a>
+          </div>
           <ul class="service-col__list">
             <li>Market &amp; Trends Analysis</li>
             <li>Product Vision</li>
@@ -180,7 +208,10 @@
           </ul>
         </div>
         <div class="service-col">
-          <p class="service-col__title">Production</p>
+          <div class="service-col__head">
+            <p class="service-col__title">Production</p>
+            <a href="product-implementation.html"><img class="service-col__arrow" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/Vector_17_3.svg" alt="→" /></a>
+          </div>
           <ul class="service-col__list">
             <li>Supplier Sourcing</li>
             <li>Production Budget</li>
@@ -189,7 +220,9 @@
           </ul>
         </div>
         <div class="service-col">
-          <p class="service-col__title">More</p>
+          <div class="service-col__head">
+            <p class="service-col__title">More ✦</p>
+          </div>
           <ul class="service-col__list">
             <li>New Brand &amp; Identity</li>
             <li>Branding &amp; Communication</li>
@@ -199,63 +232,177 @@
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
+    <!-- ═══════════════════════ PORTFOLIO SLIDER ═══════════════════════ -->
     <section class="portfolio">
       <div class="portfolio__header">
-        <div>
-          <p class="portfolio__tag">our work</p>
-          <h2 class="portfolio__title">we design for meanings, feelings &amp; business</h2>
-        </div>
-        <a href="design.html" class="btn btn--black">view all projects</a>
+        <p class="portfolio__eyebrow">our design portfolio</p>
+        <h2 class="portfolio__title">We design for meanings, feelings &amp; business</h2>
       </div>
-      <div class="portfolio__grid">
-        <div class="portfolio-item">
-          <p class="portfolio-item__num">01</p>
-          <h3 class="portfolio-item__title">Moment Watch — minimalist automatic timepiece</h3>
-          <p class="portfolio-item__meta">Designed by Martyna Piaściak · Brand: Mudita<br>Research, design strategy, industrial design, packaging</p>
+      <div class="portfolio-slider">
+        <div class="portfolio-track" id="portfolioTrack">
+
+          <div class="portfolio-slide">
+            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/sections/design_slider_7.webp" alt="Moment Watch" />
+            <div class="portfolio-slide__content">
+              <h3 class="portfolio-slide__title">Moment Watch – a minimalist, automatic timepiece</h3>
+              <p class="portfolio-slide__meta">
+                <strong>Designed by:</strong> Martyna Piaściak<br>
+                <strong>Brand:</strong> Mudita<br>
+                <strong>Scope of work:</strong> research, design strategy, industrial design, packaging
+              </p>
+              <p class="portfolio-slide__desc">Modern, unisex design. Self-winding, battery-free mechanism. Carefully selected components. Interchangeable one-click straps made of vegan, plant-based materials.</p>
+            </div>
+          </div>
+
+          <div class="portfolio-slide">
+            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/sections/design_slider_2.webp" alt="Wise Kitchen" />
+            <div class="portfolio-slide__content">
+              <h3 class="portfolio-slide__title">Wise Kitchen – mobile, modular kitchen</h3>
+              <p class="portfolio-slide__meta">
+                <strong>Designed by:</strong> Karolina Ferenc, Ryszard Rychlicki<br>
+                <strong>Brand:</strong> Wise Habit<br>
+                <strong>Scope of work:</strong> research, strategy, industrial design, packaging, photoshoot
+              </p>
+              <p class="portfolio-slide__desc">New approach to kitchen design. Collection of adaptive and mobile free-standing modules designed in the spirit of rethink | reduce | recycle. Awarded in IF Design Award 2024.</p>
+            </div>
+          </div>
+
+          <div class="portfolio-slide">
+            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/sections/design_slider_3.webp" alt="Text Block" />
+            <div class="portfolio-slide__content">
+              <h3 class="portfolio-slide__title">Text block – modular furniture system</h3>
+              <p class="portfolio-slide__meta">
+                <strong>Designed by:</strong> Pini Leibovich<br>
+                <strong>Brand:</strong> tre product<br>
+                <strong>Scope of work:</strong> industrial design, packaging, photoshoot
+              </p>
+              <p class="portfolio-slide__desc">Modular furniture system designed by Pini Leibovich. The system permits unlimited possibilities of arranging and presenting items in a space while maintaining minimalist design and functionality.</p>
+            </div>
+          </div>
+
+          <div class="portfolio-slide">
+            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/sections/design_slider_12.webp" alt="Meditation Cushions" />
+            <div class="portfolio-slide__content">
+              <h3 class="portfolio-slide__title">Meditation Cushions</h3>
+              <p class="portfolio-slide__meta">
+                <strong>Designed by:</strong> Karolina Ferenc<br>
+                <strong>Brand:</strong> Wise Habit<br>
+                <strong>Scope of work:</strong> research, design strategy, industrial design, packaging, photoshoot
+              </p>
+              <p class="portfolio-slide__desc">Excellent tool for meditation. Carefully designed construction provides support for the spine and an ergonomic body position. Covers made of 100% recycled acrylic, covered by a 5-year warranty.</p>
+            </div>
+          </div>
+
+          <div class="portfolio-slide">
+            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/sections/design_slider_10.webp" alt="NKI Group" />
+            <div class="portfolio-slide__content">
+              <h3 class="portfolio-slide__title">Multicategory design refreshment</h3>
+              <p class="portfolio-slide__meta">
+                <strong>Designed by:</strong> Martyna Piaściak, Karolina Ferenc, Piotr Kasprzak, Mikołaj Markowski<br>
+                <strong>Brand:</strong> NKI Group<br>
+                <strong>Scope of work:</strong> design audit &amp; strategy, industrial design
+              </p>
+              <p class="portfolio-slide__desc">A strategic overhaul of a 50+ product portfolio spanning coffee brewing, cookware and beauty, systematised into new four visual languages, delivered as 450+ CMF variants in four months.</p>
+            </div>
+          </div>
+
+          <div class="portfolio-slide">
+            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/sections/design_slider_11.webp" alt="House of Sustainable Materials" />
+            <div class="portfolio-slide__content">
+              <h3 class="portfolio-slide__title">House of Sustainable Materials – exhibition</h3>
+              <p class="portfolio-slide__meta">
+                <strong>Designed by:</strong> Mikołaj Markowski, Martyna Piaściak<br>
+                <strong>Brand:</strong> Wise Habit, Library of Sustainable Materials<br>
+                <strong>Scope of work:</strong> exhibition design, implementation, photoshoot
+              </p>
+              <p class="portfolio-slide__desc">The house model and library exhibition presented at Architect@Work Warsaw and Prague, promoting Wise Habit Sustainable Materials Library highlighting the feasibility of ecological materials.</p>
+            </div>
+          </div>
+
+          <div class="portfolio-slide">
+            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/sections/design_slider_9.webp" alt="Adaptive tableware" />
+            <div class="portfolio-slide__content">
+              <h3 class="portfolio-slide__title">Adaptive tableware for new serving rituals</h3>
+              <p class="portfolio-slide__meta">
+                <strong>Designed by:</strong> Martyna Piaściak, Mikołaj Markowski<br>
+                <strong>Brand:</strong> coming soon<br>
+                <strong>Scope of work:</strong> strategy, industrial design, implementation
+              </p>
+              <p class="portfolio-slide__desc">Design in cooperation with chefs and service managers. Modular system that reduces the collection size, fully supporting restaurant plating and bar shareables. Designed in Warsaw, produced locally in Poland.</p>
+            </div>
+          </div>
+
+          <div class="portfolio-slide">
+            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/sections/design_slider_8.webp" alt="Coffee brewing collection" />
+            <div class="portfolio-slide__content">
+              <h3 class="portfolio-slide__title">Modular &amp; adaptive coffee brewing collection</h3>
+              <p class="portfolio-slide__meta">
+                <strong>Designed by:</strong> Martyna Piaściak, Mikołaj Markowski, Piotr Kasprzak<br>
+                <strong>Brand:</strong> Wise Habit<br>
+                <strong>Scope of work:</strong> research, strategy, industrial design, implementation
+              </p>
+              <p class="portfolio-slide__desc">A collection featuring a range of coffee-making products, designed with circular product strategies in mind, with a focus on repairability. Designed to create daily mindful rituals.</p>
+            </div>
+          </div>
+
         </div>
-        <div class="portfolio-item">
-          <p class="portfolio-item__num">02</p>
-          <h3 class="portfolio-item__title">Wise Kitchen — mobile, modular kitchen</h3>
-          <p class="portfolio-item__meta">Designed by Karolina Ferenc, Ryszard Rychlicki · Brand: Wise Habit<br>Research, strategy, industrial design, packaging</p>
-        </div>
-        <div class="portfolio-item">
-          <p class="portfolio-item__num">03</p>
-          <h3 class="portfolio-item__title">Text Block — modular furniture system</h3>
-          <p class="portfolio-item__meta">Designed by Pini Leibovich · Brand: tre product<br>Industrial design, packaging, photoshoot</p>
-        </div>
-        <div class="portfolio-item">
-          <p class="portfolio-item__num">04</p>
-          <h3 class="portfolio-item__title">Meditation Cushions</h3>
-          <p class="portfolio-item__meta">Designed by Karolina Ferenc · Brand: Wise Habit<br>Research, design strategy, industrial design</p>
+      </div>
+      <div class="portfolio__controls">
+        <p class="portfolio__counter" id="portfolioCounter">1 / 8</p>
+        <div class="portfolio__nav">
+          <button class="portfolio__btn" id="portPrev" aria-label="Previous">
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/utils/prev_button-new.png" alt="←" />
+          </button>
+          <button class="portfolio__btn" id="portNext" aria-label="Next">
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/utils/next_button-new.png" alt="→" />
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="contact__left">
-        <p class="contact__tag">get in touch</p>
-        <h2 class="contact__title">let's work together</h2>
-        <p class="contact__text">Tell us about your project and we'll get back to you as soon as possible.</p>
-        <a href="mailto:hello@wisehabit.com" class="contact__email">hello@wisehabit.com</a>
+    <!-- ═══════════════════════ LIBRARY SECTION ═══════════════════════ -->
+    <section class="library-section">
+      <div class="library-section__img">
+        <img src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/Image_4.png" alt="Library of Sustainable Materials" />
       </div>
-      <div class="contact__right">
-        <div class="contact__detail">
-          <p class="contact__detail-label">Studio</p>
-          <p class="contact__detail-value">Wise Habit Agency for the Future<br>Warsaw, Poland</p>
+      <div class="library-section__content">
+        <p class="library-section__tag">Library of Sustainable Materials</p>
+        <h2 class="library-section__title">Collection of sustainable materials</h2>
+        <p class="library-section__text">Located in Warsaw, both a physical and online resource. Comprehensive collection of sustainable materials that considers various factors. Library features more than 40 European brands, with our collection continuously expanding with more than 1000 materials samples.</p>
+        <a href="library.html" class="btn btn--black">
+          go to library
+          <img src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/Vector_2_5.svg" alt="" style="height:11px;" />
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+    <section class="contact-section" id="contact">
+      <div class="contact-section__brand">
+        <a href="https://wisehabit.com" target="_blank">
+          <img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" />
+        </a>
+        <div class="social">
+          <a href="https://www.instagram.com/wise.habit/" target="_blank">
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/utils/logos/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/company/wise-habit/" target="_blank">
+            <img src="https://agency.wisehabit.com/data/gfx/pol/navigation/4_4_o_329.svg" alt="LinkedIn" />
+          </a>
         </div>
-        <div class="contact__detail">
-          <p class="contact__detail-label">Website</p>
-          <p class="contact__detail-value"><a href="https://wisehabit.com" target="_blank">wisehabit.com</a></p>
-        </div>
-        <div class="contact__detail">
-          <p class="contact__detail-label">Follow</p>
-          <p class="contact__detail-value">
-            <a href="https://www.instagram.com/wisehabitagency/" target="_blank">Instagram</a> &nbsp;·&nbsp;
-            <a href="https://www.linkedin.com/company/wisehabit/" target="_blank">LinkedIn</a>
-          </p>
-        </div>
+      </div>
+      <div class="contact-section__links">
+        <a href="sustainability.html">Sustainability</a>
+        <a href="library.html">Material Library</a>
+        <a href="https://wisehabit.com/eng_m_awards-236.html" target="_blank">Sustainability Awards</a>
+        <a href="design.html">Design Services</a>
+        <a href="product-implementation.html">Product Implementation</a>
+        <a href="https://wisehabit.com/blog-eng.phtml" target="_blank">Blog</a>
+      </div>
+      <div class="contact-section__info">
+        <a href="mailto:office@wisehabit.com">office@wisehabit.com</a>
+        <a href="tel:+48608561173">+48 608 561 173</a>
+        <p>Warsaw, Poland</p>
       </div>
     </section>
 
@@ -267,70 +414,112 @@
       <li><a href="about.html">about</a></li>
       <li><a href="sustainability.html">sustainability</a></li>
       <li><a href="library.html">library</a></li>
+      <li><a href="design.html">design services</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
   </footer>
 
   <script>
-    /* =============================================
-       COLOR STRIP — scroll-driven, hard cuts
-       ============================================= */
+  /* =============================================
+     COLOR STRIP — scroll-driven, hard cuts, no transitions
+     ============================================= */
 
-    // All 18 colors (home = all)
-    // Services: #363C54, #414156, #455F2C, #35813F, #813B1B, #3C5CA9, #F47F2D
-    // Conferences: #55926B, #CCDBDF, #A5BFCA, #89A8AB
-    // Exhibitions & Library: #0E1310, #1C3D18, #7892A3, #81ADBC, #9FA39F, #E0ADA9, #FBDDE1
+  const ALL_COLORS = [
+    // Services
+    '#363C54','#414156','#455F2C','#35813F','#813B1B','#3C5CA9','#F47F2D',
+    // Conferences
+    '#55926B','#CCDBDF','#A5BFCA','#89A8AB',
+    // Exhibitions & Library
+    '#0E1310','#1C3D18','#7892A3','#81ADBC','#9FA39F','#E0ADA9','#FBDDE1'
+  ];
 
-    const ALL_COLORS = [
-      '#363C54','#414156','#455F2C','#35813F','#813B1B','#3C5CA9','#F47F2D',
-      '#55926B','#CCDBDF','#A5BFCA','#89A8AB',
-      '#0E1310','#1C3D18','#7892A3','#81ADBC','#9FA39F','#E0ADA9','#FBDDE1'
-    ];
+  const SEG_W = 80;
+  const SPEED = 0.12;
+  const strip = document.getElementById('colorStrip');
 
-    const SEG_WIDTH = 80; // px per segment
-    const SPEED = 0.15;   // px of strip movement per px scrolled
-
-    const strip = document.getElementById('colorStrip');
-
-    function buildStrip(colors) {
-      strip.innerHTML = '';
-      // Repeat enough times to fill screen + buffer
-      const totalNeeded = Math.ceil((window.innerWidth * 3) / (colors.length * SEG_WIDTH)) + 2;
-      for (let i = 0; i < totalNeeded * colors.length; i++) {
-        const seg = document.createElement('div');
-        seg.className = 'color-strip__seg';
-        seg.style.width = SEG_WIDTH + 'px';
-        seg.style.background = colors[i % colors.length];
-        strip.appendChild(seg);
-      }
+  function buildStrip(colors) {
+    strip.innerHTML = '';
+    const reps = Math.ceil((window.innerWidth * 4) / (colors.length * SEG_W)) + 2;
+    for (let i = 0; i < reps * colors.length; i++) {
+      const s = document.createElement('div');
+      s.className = 'color-strip__seg';
+      s.style.cssText = `width:${SEG_W}px;background:${colors[i % colors.length]}`;
+      strip.appendChild(s);
     }
+  }
 
-    buildStrip(ALL_COLORS);
-    window.addEventListener('resize', () => buildStrip(ALL_COLORS));
+  buildStrip(ALL_COLORS);
+  window.addEventListener('resize', () => buildStrip(ALL_COLORS));
 
-    window.addEventListener('scroll', () => {
-      const offset = -(window.scrollY * SPEED) % (ALL_COLORS.length * SEG_WIDTH);
-      strip.style.transform = `translateX(${offset}px)`;
-    }, { passive: true });
+  window.addEventListener('scroll', () => {
+    const offset = -(window.scrollY * SPEED) % (ALL_COLORS.length * SEG_W);
+    strip.style.transform = `translateX(${offset}px)`;
+  }, { passive: true });
 
-    /* =============================================
-       HAMBURGER
-       ============================================= */
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
+  /* =============================================
+     NUTSHELL SLIDER
+     ============================================= */
 
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
+  const nutTrack = document.getElementById('nutshellTrack');
+  const nutItems = nutTrack.querySelectorAll('.nutshell__item');
+  let nutIdx = 0;
+  const NUT_VISIBLE = 3;
+  const nutMax = nutItems.length - NUT_VISIBLE;
+
+  function updateNut() {
+    const itemW = nutItems[0].offsetWidth + 1;
+    nutTrack.style.transform = `translateX(-${nutIdx * itemW}px)`;
+  }
+
+  document.getElementById('nutPrev').addEventListener('click', () => {
+    if (nutIdx > 0) { nutIdx--; updateNut(); }
+  });
+  document.getElementById('nutNext').addEventListener('click', () => {
+    if (nutIdx < nutMax) { nutIdx++; updateNut(); }
+  });
+
+  /* =============================================
+     PORTFOLIO SLIDER
+     ============================================= */
+
+  const portTrack = document.getElementById('portfolioTrack');
+  const portSlides = portTrack.querySelectorAll('.portfolio-slide');
+  const portCounter = document.getElementById('portfolioCounter');
+  let portIdx = 0;
+  const portTotal = portSlides.length;
+
+  function updatePort() {
+    portTrack.style.transform = `translateX(-${portIdx * 100}%)`;
+    portCounter.textContent = `${portIdx + 1} / ${portTotal}`;
+  }
+
+  document.getElementById('portPrev').addEventListener('click', () => {
+    portIdx = portIdx > 0 ? portIdx - 1 : portTotal - 1;
+    updatePort();
+  });
+  document.getElementById('portNext').addEventListener('click', () => {
+    portIdx = portIdx < portTotal - 1 ? portIdx + 1 : 0;
+    updatePort();
+  });
+
+  /* =============================================
+     HAMBURGER
+     ============================================= */
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
     });
-
-    // Close mobile nav on link click
-    mobileNav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-      });
-    });
+  });
   </script>
 </body>
 </html>
