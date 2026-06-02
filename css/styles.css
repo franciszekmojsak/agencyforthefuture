@@ -718,6 +718,50 @@ a { color: inherit; text-decoration: none; }
   align-self: flex-start;
 }
 
+/* Service checkboxes — pill style */
+.service-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.service-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-family: var(--font);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  background: transparent;
+  color: var(--black);
+}
+.service-chip input[type="checkbox"] { display: none; }
+.service-chip:has(input:checked) {
+  border-color: var(--black);
+  background: var(--black);
+  color: #fff;
+}
+
+.form-chips-label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 12px;
+}
+
+/* Values grid — 3-column variant */
+.values-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 /* =============================================
    FOOTER
    ============================================= */
