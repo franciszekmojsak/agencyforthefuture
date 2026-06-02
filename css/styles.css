@@ -314,15 +314,15 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
   padding: 0 var(--pad-h);
   display: flex;
-  justify-content: center;
-  gap: 60px;
+  justify-content: space-between;
+  gap: 48px;
   flex-wrap: wrap;
 }
 
 .intro-card {
   flex: 1;
   min-width: 240px;
-  max-width: 380px;
+  max-width: none;
   display: flex;
   flex-direction: column;
   gap: 16px;
