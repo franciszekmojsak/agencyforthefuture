@@ -3,50 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>product implementation — Wise Habit Agency</title>
-  <meta name="description" content="Reliability and fairness of new product implementation — Wise Habit Agency." />
+  <title>Product Implementation — Agency for the Future</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
-    <div class="nav__logo">
-      <a href="index.html">
-        <img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Wise Habit Agency" />
-      </a>
-      <a href="https://wisehabit.com" target="_blank">
-        <img class="nav__logo-wh" src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" />
-      </a>
-    </div>
-    <ul class="nav__links">
-      <li><a href="about.html">about</a></li>
-      <li><a href="sustainability.html">sustainability</a></li>
-      <li class="nav__dropdown">
-        <span>services ▾</span>
-        <div class="nav__dropdown-menu">
-          <a href="design.html">design</a>
-          <a href="product-implementation.html">product implementation</a>
-        </div>
-      </li>
-      <li><a href="archisnob.html">archisnob</a></li>
-      <li><a href="library.html">library</a></li>
-      <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">news</a></li>
-      <li><a href="conference.html">conference</a></li>
-      <li><a href="#contact">contact</a></li>
-    </ul>
-    <div class="nav__hamburger" id="hamburger">
-      <span></span><span></span><span></span>
+    <div class="nav__inner">
+      <div class="nav__logo">
+        <a class="nav__logo-agency" href="index.html"><img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Agency for the Future" /></a>
+        <a class="nav__logo-wh" href="https://wisehabit.com" target="_blank"><img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" /></a>
+      </div>
+      <ul class="nav__links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="sustainability.html">sustainability</a></li>
+        <li class="nav__dropdown active"><span>services ▾</span>
+          <div class="nav__dropdown-menu">
+            <a href="design.html">design</a>
+            <a href="product-implementation.html">product implementation</a>
+          </div>
+        </li>
+        <li><a href="archisnob.html">archisnob</a></li>
+        <li><a href="library.html">library</a></li>
+        <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">news</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+      <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
 
-  <!-- MOBILE NAV -->
   <div class="nav__mobile" id="mobileNav">
     <ul class="nav__mobile-links">
       <li><a href="about.html">about</a></li>
       <li><a href="sustainability.html">sustainability</a></li>
-      <li>
-        <span>services</span>
+      <li><span>services</span>
         <ul class="nav__mobile-sub">
           <li><a href="design.html">design</a></li>
           <li><a href="product-implementation.html">product implementation</a></li>
@@ -55,252 +45,160 @@
       <li><a href="archisnob.html">archisnob</a></li>
       <li><a href="library.html">library</a></li>
       <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">news</a></li>
-      <li><a href="conference.html">conference</a></li>
-      <li><a href="#contact">contact</a></li>
+      <li><a href="contact.html">contact</a></li>
     </ul>
+  </div>
+
+  <div class="color-strip-wrapper">
+    <div class="color-strip" id="colorStrip"></div>
   </div>
 
   <main class="page-content">
 
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-      <p class="page-hero__tag">product implementation</p>
-      <h1 class="page-hero__title">Reliability &amp; fairness of new<br>product implementation</h1>
-      <div class="page-hero__ctas">
-        <a href="#contact" class="btn btn--white">get in touch</a>
-        <a href="#learn-more" class="btn btn--ghost">learn more ↓</a>
-      </div>
-    </section>
-
-    <!-- IMPLEMENTATION CARDS -->
-    <section class="section" id="learn-more">
-      <p class="section__tag">idea implementation</p>
-      <h2 class="section__title">Your idea introduced to the market</h2>
-      <div class="cards">
-        <div class="card">
-          <h3 class="card__title">Reliability through experience</h3>
-          <p class="card__text">With nearly 20 years of experience and our process ensures reliable services by focusing on every aspect of the product life cycle, engaging design, marketing, and sales to maximize success.</p>
-        </div>
-        <div class="card">
-          <h3 class="card__title">Innovation &amp; sustainability</h3>
-          <p class="card__text">Our implementation services are dedicated to innovation and sustainability, exploring new materials, technologies, and concepts to meet client needs while promoting sustainability and fairness.</p>
-        </div>
-        <div class="card">
-          <h3 class="card__title">Market success</h3>
-          <p class="card__text">From design concept, market analysis and budgeting to certification and marketing asset creation. Our services are designed to deliver market success while upholding principles of sustainability and fairness.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="hero__tag">product implementation</p>
+        <h1 class="hero__title">From prototype to<span class="line2">production at scale</span></h1>
+        <div class="hero__ctas">
+          <a href="contact.html" class="btn btn--filled">start a project <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="design.html" class="btn btn--outline">design services <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
-      <img class="section__full-img" src="https://agency.wisehabit.com/data/include/cms/Agency/implementation/figma-test/image-5.png" alt="Product implementation" />
     </section>
 
-    <!-- RELIABILITY -->
-    <section class="section section--gray">
-      <p class="section__tag">reliability of our services</p>
-      <ol class="numbered-list">
-        <li>Over <strong>20 years</strong> of entrepreneurs perspective enabling better understanding of business</li>
-        <li><strong>Holistic approach</strong> from idea to product on the market</li>
-        <li>Design with <strong>sustainability in mind</strong>, approach with care of whole product life-cycle</li>
-        <li>Portfolio of designs with <strong>International Design Awards</strong> &amp; title of <strong>Designer of the Year 2023</strong> by Polish Institute of Design</li>
-        <li><strong>Empathetic understanding</strong> of client, user and other life forms involved in project</li>
-        <li>Library of Sustainable Materials features <strong>more than 40 European brands</strong></li>
-      </ol>
-    </section>
-
-    <!-- PORTFOLIO DESCRIPTION -->
-    <section class="section">
-      <p class="section__tag">implementation of a new product</p>
-      <h2 class="section__title">Portfolio of over 80 products introduced to the market</h2>
-      <p class="section__text">Our support extends beyond the design phase to the comprehensive implementation of a new product on the market. We offer services including market and competition research, trend reports tailored to your industry, support in obtaining funding for implementation, and assistance in preparing necessary documentation.</p>
-      <a href="#contact" class="btn btn--black" style="margin-top:8px; margin-bottom:8px;">discuss a project →</a>
-      <ul class="numbered-list" style="margin-top:2rem; list-style:none; padding:0;">
-        <li>→ Tableware</li>
-        <li>→ Furnishing</li>
-        <li>→ Home accessories</li>
-        <li>→ Consumer electronics</li>
-        <li>→ Watches</li>
-      </ul>
-    </section>
-
-    <!-- PORTFOLIO SLIDER -->
-    <section class="portfolio">
-      <div class="portfolio__header">
-        <p class="portfolio__tag">implementation portfolio</p>
-        <h2 class="portfolio__title">Products brought to market</h2>
-      </div>
-      <div class="portfolio-slider">
-        <div class="portfolio-track">
-          <div class="portfolio-slide">
-            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/implementation/implementation_slider_1.webp" alt="Vovo Glasses" />
-            <div class="portfolio-slide__content">
-              <h3 class="portfolio-slide__title">Vovo Glasses</h3>
-              <div class="portfolio-slide__meta">Design: Ewa Hiller | Materials: borosilicate, coloured glass</div>
-              <p class="portfolio-slide__desc">Vovo Glasses are an object of art, born from fascination with two basic geometric forms. Coloured glass elements create various hues and an illusion of changing shapes.</p>
-            </div>
+    <!-- INTRO -->
+    <section class="page-section">
+      <div class="inner">
+        <div class="page-intro-grid">
+          <div class="page-intro-grid__left">
+            <p class="section-eyebrow">implementation approach</p>
+            <h2 class="section-title">We bridge the gap between design and reality</h2>
           </div>
-          <div class="portfolio-slide">
-            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/implementation/implementation_slider_2.webp" alt="Piano Table" />
-            <div class="portfolio-slide__content">
-              <h3 class="portfolio-slide__title">Piano Table</h3>
-              <div class="portfolio-slide__meta">Design: Ewa Hiller | Materials: handcrafted solid wood, varnished or painted</div>
-              <p class="portfolio-slide__desc">Designed around the ritual of extending the table. Made of solid wood, the piece has an austere structure and clean lines. Its power of expression stems from simplicity.</p>
-            </div>
-          </div>
-          <div class="portfolio-slide">
-            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/implementation/implementation_slider_3.webp" alt="Mood Mirror" />
-            <div class="portfolio-slide__content">
-              <h3 class="portfolio-slide__title">Mood Mirror</h3>
-              <div class="portfolio-slide__meta">Design: Dorothee Mainka | Materials: coloured mirror and powder coated steel frame</div>
-              <p class="portfolio-slide__desc">Collection of three wall mirrors of different proportions and colours. The metal shelf embraces the mirror face and wanders up each site, providing shelf space for small everyday objects.</p>
-            </div>
-          </div>
-          <div class="portfolio-slide">
-            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/implementation/implementation_slider_4.webp" alt="Bowler Mug" />
-            <div class="portfolio-slide__content">
-              <h3 class="portfolio-slide__title">Bowler Mug</h3>
-              <div class="portfolio-slide__meta">Design: Ola Mirecka | Materials: moulded and fired, unglazed porcelain</div>
-              <p class="portfolio-slide__desc">Designed for relaxed celebration of hot beverages. Made of specially developed porcelain that doesn't require glazing. The matt surface makes it unique and will age beautifully.</p>
-            </div>
-          </div>
-          <div class="portfolio-slide">
-            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/implementation/implementation_slider_5.webp" alt="Cork Stool" />
-            <div class="portfolio-slide__content">
-              <h3 class="portfolio-slide__title">Cork Stool</h3>
-              <div class="portfolio-slide__meta">Design: Tomasz Rygalik | Materials: turned cork, expanded or natural</div>
-              <p class="portfolio-slide__desc">Shape inspired by the material it is made of. Eco-friendly, highly endurable and very light, cork still seems underexploited in furniture design.</p>
-            </div>
-          </div>
-          <div class="portfolio-slide">
-            <img class="portfolio-slide__img" src="https://agency.wisehabit.com/data/include/cms/Agency/implementation/implementation_slider_6.webp" alt="Dee Table" />
-            <div class="portfolio-slide__content">
-              <h3 class="portfolio-slide__title">Dee Table</h3>
-              <div class="portfolio-slide__meta">Design: Fabio Hendry &amp; Martijn Rigters | Materials: anodized aluminum</div>
-              <p class="portfolio-slide__desc">Simple form of aluminium d-shaped side table resonates its modern look. Special advantage of anodised aluminium includes corrosion and scratch resistance.</p>
-            </div>
+          <div class="page-intro-grid__right">
+            <p class="body-text">Great design means nothing if it cannot be manufactured. We work with an extensive network of over 350 verified suppliers and manufacturers across Europe to ensure every product we design can actually be built — at the right quality, cost and scale.</p>
+            <p class="body-text">Our implementation team guides projects from the first prototype through production ramp-up, quality control and final delivery. We speak the language of both designers and manufacturers.</p>
           </div>
         </div>
       </div>
-      <div class="portfolio__controls">
-        <button class="portfolio__btn portfolio-prev" aria-label="Previous">
-          <svg viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <button class="portfolio__btn portfolio-next" aria-label="Next">
-          <svg viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <div class="portfolio__dots">
-          <div class="portfolio__dot active"></div>
-          <div class="portfolio__dot"></div>
-          <div class="portfolio__dot"></div>
-          <div class="portfolio__dot"></div>
-          <div class="portfolio__dot"></div>
-          <div class="portfolio__dot"></div>
+    </section>
+
+    <!-- SERVICES LIST -->
+    <section class="page-section page-section--tinted">
+      <div class="inner">
+        <p class="section-eyebrow centered">implementation services</p>
+        <h2 class="section-title centered">What we deliver</h2>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Supplier Sourcing</h3>
+            <p class="service-detail-card__text">We identify and qualify the best manufacturers for your product based on material, technology, geography, capacity and sustainability criteria. Access to 350+ verified partners.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Production Budget</h3>
+            <p class="service-detail-card__text">Detailed cost breakdowns, tooling estimates, MOQ negotiations and total landed cost modelling. No surprises at the production stage.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Prototyping</h3>
+            <p class="service-detail-card__text">From concept models and appearance samples to functional prototypes and pre-production units. We manage the full prototyping cycle.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Production Supervision</h3>
+            <p class="service-detail-card__text">On-site and remote production monitoring, quality inspection, packaging specification and logistics coordination. From first article to final shipment.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Strategy & Pricing</h3>
+            <p class="service-detail-card__text">Sales strategy, retail pricing, channel planning and go-to-market support. We help position your product competitively in the market.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Marketing Assets</h3>
+            <p class="service-detail-card__text">Product photography direction, sales presentations, e-commerce content and trade fair materials. Everything you need to launch confidently.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- MATERIALS SECTION -->
-    <section class="half-grid">
-      <div class="half-grid__content">
-        <p class="section__tag">materials &amp; manufacturing</p>
-        <h2 class="section__title">We are experienced in a wide array of materials and technologies</h2>
-        <p class="section__text">From traditional glass, wood, metals, plastics to innovative, sustainable materials — we leverage diverse possibilities to bring your vision to life. With established relationships with over 350 suppliers worldwide, we deliver high-quality products at accessible price points.</p>
-      </div>
-      <div class="half-grid__img">
-        <img src="https://agency.wisehabit.com/data/include/cms/Agency/implementation/figma-test/image-9.png" alt="Materials and manufacturing" />
+    <!-- NETWORK -->
+    <section class="page-section">
+      <div class="inner">
+        <div class="page-intro-grid">
+          <div class="page-intro-grid__left">
+            <p class="section-eyebrow">our network</p>
+            <h2 class="section-title">350+ verified suppliers & manufacturers</h2>
+          </div>
+          <div class="page-intro-grid__right">
+            <p class="body-text">Built over 20 years of entrepreneurial practice, our supplier network covers a wide range of materials, processes and geographies — from precision metal workshops in Warsaw to bio-material specialists across Scandinavia.</p>
+            <p class="body-text">Every supplier is vetted for quality standards, production capacity, communication reliability and — increasingly — environmental and social responsibility credentials.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- SUSTAINABILITY LINK -->
-    <section class="section section--black">
-      <h2 class="section__title">Solutions for more sustainable &amp; circular products</h2>
-      <p class="section__text">Our agency is dedicated to fostering a sustainable world through circular design practices. We guide businesses from linear to circular models through purposeful design interventions.</p>
-      <a href="sustainability.html" class="btn btn--white">learn more →</a>
-      <img class="section__full-img" src="https://agency.wisehabit.com/data/include/cms/Agency/utils/graphs/graf_-_sourcing_disposal-_desktop.svg" alt="Sourcing and disposal diagram" />
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
-      <h2 class="contact-section__title">Let's work together</h2>
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div>
-          <input type="text" name="name" placeholder="Your name" required />
-        </div>
-        <div>
-          <input type="email" name="email" placeholder="Your email" required />
-        </div>
-        <div>
-          <input type="text" name="company" placeholder="Company (optional)" />
-        </div>
-        <div>
-          <input type="text" name="subject" placeholder="Subject" />
-        </div>
-        <div class="contact-form__full">
-          <textarea name="message" placeholder="Tell us about your project…" required></textarea>
-        </div>
-        <div>
-          <button type="submit" class="contact-form__submit">Send message</button>
-        </div>
-      </form>
+    <!-- CTA -->
+    <section class="page-cta">
+      <div class="inner">
+        <h2 class="page-cta__title">Ready to bring your product to life?</h2>
+        <a href="contact.html" class="btn btn--filled">talk to us <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Wise Habit Agency" />
-        <img class="footer__brand-wh" src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" />
-        <div class="footer__contact">
+  <div class="footer-main">
+    <div class="footer-main__inner">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand-block">
+          <a class="footer-brand" href="https://wisehabit.com" target="_blank"><img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="Wise Habit" /></a>
+          <p class="footer-tagline">Agency for the Future</p>
+        </div>
+        <div class="footer-contact-block">
+          <p class="footer-block-label">contact</p>
           <a href="mailto:office@wisehabit.com">office@wisehabit.com</a>
           <a href="tel:+48608561173">+48 608 561 173</a>
-          <span>Warsaw, Poland</span>
+          <p>Warsaw, Poland</p>
         </div>
-        <div class="footer__socials">
-          <a href="https://www.instagram.com/wise.habit/" target="_blank">
-            <img src="https://agency.wisehabit.com/data/include/cms/Agency/utils/logos/instagram.svg" alt="Instagram" />
-          </a>
-          <a href="https://www.linkedin.com/company/wise-habit/" target="_blank">
-            <img src="https://agency.wisehabit.com/data/gfx/pol/navigation/4_4_o_329.svg" alt="LinkedIn" />
-          </a>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/wise.habit/" target="_blank" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.linkedin.com/company/wise-habit/" target="_blank" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 10v7M12 13a3 3 0 0 1 6 0v4"/></svg></a>
         </div>
       </div>
-      <div>
-        <p class="footer__nav-title">Pages</p>
-        <ul class="footer__nav-links">
-          <li><a href="sustainability.html">Sustainability</a></li>
-          <li><a href="library.html">Material Library</a></li>
-          <li><a href="design.html">Design Services</a></li>
-          <li><a href="product-implementation.html">Product Implementation</a></li>
-          <li><a href="archisnob.html">Archisnob</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer__nav-title">External</p>
-        <ul class="footer__nav-links">
-          <li><a href="https://wisehabit.com" target="_blank">wisehabit.com</a></li>
-          <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">Blog / News</a></li>
-          <li><a href="https://wisehabit.com/eng_m_awards-236.html" target="_blank">Sustainability Awards</a></li>
-        </ul>
+      <div class="footer-col footer-col--nav">
+        <p class="footer-col__heading">Explore</p>
+        <a class="footer-col__link" href="about.html">About</a>
+        <a class="footer-col__link" href="sustainability.html">Sustainability</a>
+        <a class="footer-col__link" href="design.html">Design Services</a>
+        <a class="footer-col__link" href="archisnob.html">Archisnob</a>
+        <a class="footer-col__link" href="library.html">Material Library</a>
+        <a class="footer-col__link" href="https://wisehabit.com/blog-eng.phtml" target="_blank">Blog</a>
       </div>
     </div>
-    <div class="footer__bottom">
-      <span>© 2024 Wise Habit Sp. z o.o. — Agency for the Future</span>
-      <span>Warsaw, Poland</span>
-    </div>
+  </div>
+  <footer class="footer-bottom">
+    <p class="footer-bottom__copy">© 2025 Wise Habit Agency for the Future</p>
   </footer>
 
-  <script src="js/main.js"></script>
   <script>
-    // Wire up hamburger
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    });
+  const PAGE_COLORS = ['#363C54','#414156','#455F2C','#35813F','#813B1B','#3C5CA9','#F47F2D'];
+  const SEG_W = 80, SPEED = 0.12;
+  const strip = document.getElementById('colorStrip');
+  function buildStrip(c) {
+    strip.innerHTML = '';
+    const reps = Math.ceil((window.innerWidth * 4) / (c.length * SEG_W)) + 2;
+    for (let i = 0; i < reps * c.length; i++) {
+      const s = document.createElement('div');
+      s.className = 'color-strip__seg';
+      s.style.cssText = `width:${SEG_W}px;background:${c[i % c.length]}`;
+      strip.appendChild(s);
+    }
+  }
+  buildStrip(PAGE_COLORS);
+  window.addEventListener('resize', () => buildStrip(PAGE_COLORS));
+  window.addEventListener('scroll', () => {
+    strip.style.transform = `translateX(${-(window.scrollY * SPEED) % (PAGE_COLORS.length * SEG_W)}px)`;
+  }, { passive: true });
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileNav.classList.toggle('open'); });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); mobileNav.classList.remove('open'); }));
   </script>
-
 </body>
 </html>
