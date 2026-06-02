@@ -3,50 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>about — Wise Habit Agency</title>
-  <meta name="description" content="We are a strategic design agency that works for a better future." />
+  <title>Design Services — Agency for the Future</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
-    <div class="nav__logo">
-      <a href="index.html">
-        <img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Wise Habit Agency" />
-      </a>
-      <a href="https://wisehabit.com" target="_blank">
-        <img class="nav__logo-wh" src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" />
-      </a>
-    </div>
-    <ul class="nav__links">
-      <li><a href="about.html">about</a></li>
-      <li><a href="sustainability.html">sustainability</a></li>
-      <li class="nav__dropdown">
-        <span>services ▾</span>
-        <div class="nav__dropdown-menu">
-          <a href="design.html">design</a>
-          <a href="product-implementation.html">product implementation</a>
-        </div>
-      </li>
-      <li><a href="archisnob.html">archisnob</a></li>
-      <li><a href="library.html">library</a></li>
-      <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">news</a></li>
-      <li><a href="conference.html">conference</a></li>
-      <li><a href="#contact">contact</a></li>
-    </ul>
-    <div class="nav__hamburger" id="hamburger">
-      <span></span><span></span><span></span>
+    <div class="nav__inner">
+      <div class="nav__logo">
+        <a class="nav__logo-agency" href="index.html"><img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Agency for the Future" /></a>
+        <a class="nav__logo-wh" href="https://wisehabit.com" target="_blank"><img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" /></a>
+      </div>
+      <ul class="nav__links">
+        <li><a href="about.html">about</a></li>
+        <li><a href="sustainability.html">sustainability</a></li>
+        <li class="nav__dropdown active"><span>services ▾</span>
+          <div class="nav__dropdown-menu">
+            <a href="design.html">design</a>
+            <a href="product-implementation.html">product implementation</a>
+          </div>
+        </li>
+        <li><a href="archisnob.html">archisnob</a></li>
+        <li><a href="library.html">library</a></li>
+        <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">news</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+      <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
 
-  <!-- MOBILE NAV -->
   <div class="nav__mobile" id="mobileNav">
     <ul class="nav__mobile-links">
       <li><a href="about.html">about</a></li>
       <li><a href="sustainability.html">sustainability</a></li>
-      <li>
-        <span>services</span>
+      <li><span>services</span>
         <ul class="nav__mobile-sub">
           <li><a href="design.html">design</a></li>
           <li><a href="product-implementation.html">product implementation</a></li>
@@ -55,185 +45,182 @@
       <li><a href="archisnob.html">archisnob</a></li>
       <li><a href="library.html">library</a></li>
       <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">news</a></li>
-      <li><a href="conference.html">conference</a></li>
-      <li><a href="#contact">contact</a></li>
+      <li><a href="contact.html">contact</a></li>
     </ul>
+  </div>
+
+  <div class="color-strip-wrapper">
+    <div class="color-strip" id="colorStrip"></div>
   </div>
 
   <main class="page-content">
 
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-      <p class="page-hero__tag">about the agency</p>
-      <h1 class="page-hero__title">We are a strategic design agency<br>that works for a better future</h1>
-      <div class="page-hero__ctas">
-        <a href="#contact" class="btn btn--white">get in touch</a>
-        <a href="#learn-more" class="btn btn--ghost">learn more ↓</a>
-      </div>
-    </section>
-
-    <!-- VALUES SECTION -->
-    <section class="section" id="learn-more">
-      <p class="section__tag">our values</p>
-      <h2 class="section__title">We stand for design that creates a mindful &amp; sustainable world</h2>
-      <div class="values-grid">
-        <div class="value-item">
-          <h3 class="value-item__title">Design</h3>
-          <p class="value-item__text">We are convinced that products impact our lives. We design and implement products in a thoughtful and conscious way, taking into account social equality, respect for the environment, and the impact on the economy.</p>
-        </div>
-        <div class="value-item">
-          <h3 class="value-item__title">Sustainability</h3>
-          <p class="value-item__text">We support the path of sustainable development – taking into account the mutual relationships of society, nature, and the economy. Human and The Planet. Rethink. Reduce. Reuse. Recycle.</p>
-        </div>
-        <div class="value-item">
-          <h3 class="value-item__title">Awareness</h3>
-          <p class="value-item__text">In our fast-paced world, we lack the time to stop and enjoy the present moment. Awareness gives us a connection to ourselves and the world so that we can discover every day, anew. Balance. Soul and Body.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="hero__tag">design services</p>
+        <h1 class="hero__title">From first idea to<span class="line2">market-ready product</span></h1>
+        <div class="hero__ctas">
+          <a href="contact.html" class="btn btn--filled">start a project <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="product-implementation.html" class="btn btn--outline">product implementation <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
     </section>
 
-    <!-- OFFICE SECTION -->
-    <section class="section section--gray">
-      <p class="section__tag">our office</p>
-      <h2 class="section__title">Space for meaningful designs &amp; collaborative partnerships</h2>
-      <p class="section__text">Enhanced competitiveness in a rapidly evolving world, addressing the growing demand for sustainable and regenerative solutions, resilient production, and societal shifts.</p>
-      <p class="section__text">Development of products tailored to the needs of users, societal and environmental concerns, fostering long-term solutions supporting business stability and credibility.</p>
-      <img class="section__full-img" src="https://agency.wisehabit.com/data/include/cms/Agency/about/Image_23.png" alt="Wise Habit Agency Office" />
-    </section>
-
-    <!-- SERVICES -->
-    <section class="services">
-      <div class="services__header">
-        <p class="section__tag">services</p>
-        <h2 class="section__title">We are convinced the change starts<br>from design and designers</h2>
-      </div>
-      <div class="services__grid">
-        <div class="service-col">
-          <h3 class="service-col__title"><a href="design.html">DESIGN <img src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/Vector_17_3.svg" alt="" /></a></h3>
-          <ul class="service-col__list">
-            <li>Product Research &amp; Strategy</li>
-            <li>Circular Design Strategies</li>
-            <li>UX/UI Design</li>
-            <li>Graphic Design</li>
-            <li>Packaging Design</li>
-            <li>Exhibition Design</li>
-          </ul>
-        </div>
-        <div class="service-col">
-          <h3 class="service-col__title"><a href="design.html">STRATEGY <img src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/Vector_17_3.svg" alt="" /></a></h3>
-          <ul class="service-col__list">
-            <li>Market &amp; Trends Analysis</li>
-            <li>Product Vision</li>
-            <li>Product Pricing</li>
-            <li>Sales Strategy</li>
-            <li>Implementation Plan</li>
-            <li>Marketing &amp; Sales Assets</li>
-          </ul>
-        </div>
-        <div class="service-col">
-          <h3 class="service-col__title"><a href="product-implementation.html">PRODUCTION <img src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/Vector_17_3.svg" alt="" /></a></h3>
-          <ul class="service-col__list">
-            <li>Supplier Sourcing</li>
-            <li>Production Budget</li>
-            <li>Prototyping</li>
-            <li>Production Supervision</li>
-          </ul>
-        </div>
-        <div class="service-col">
-          <h3 class="service-col__title">MORE ✦</h3>
-          <ul class="service-col__list">
-            <li>New Brand &amp; Identity</li>
-            <li>Branding &amp; Communication</li>
-            <li>Intellectual Property Support</li>
-          </ul>
+    <!-- INTRO -->
+    <section class="page-section">
+      <div class="inner">
+        <div class="page-intro-grid">
+          <div class="page-intro-grid__left">
+            <p class="section-eyebrow">design approach</p>
+            <h2 class="section-title">We design products that mean something</h2>
+          </div>
+          <div class="page-intro-grid__right">
+            <p class="body-text">Our design process is rooted in research and empathy. We spend time understanding the people who will use the product, the context it lives in, and the business goals it must serve — before we draw a single line.</p>
+            <p class="body-text">The result is design that is purposeful, commercially viable, and built to last. We work across industrial design, UX/UI, graphic design and packaging — always with sustainability as an underlying principle.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
-      <h2 class="contact-section__title">Let's work together</h2>
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div>
-          <input type="text" name="name" placeholder="Your name" required />
+    <!-- SERVICES LIST -->
+    <section class="page-section page-section--tinted">
+      <div class="inner">
+        <p class="section-eyebrow centered">what we offer</p>
+        <h2 class="section-title centered">Design services</h2>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Product Research & Strategy</h3>
+            <p class="service-detail-card__text">Market analysis, user research, trend mapping, and product vision definition. We build the strategic foundation before design begins.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Circular Design Strategies</h3>
+            <p class="service-detail-card__text">Lifecycle analysis and design for disassembly, repairability, reuse and recyclability. We help make your product part of a circular economy.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">UX/UI Design</h3>
+            <p class="service-detail-card__text">User experience and interface design for digital products, apps and connected devices. Clarity, usability and aesthetic consistency.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Graphic Design</h3>
+            <p class="service-detail-card__text">Visual identity, editorial design, campaign materials and brand assets. From logo systems to complete visual language.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Packaging Design</h3>
+            <p class="service-detail-card__text">Functional and sustainable packaging — structural design, material selection, and visual design that communicates your brand values.</p>
+          </div>
+          <div class="service-detail-card">
+            <h3 class="service-detail-card__title">Exhibition Design</h3>
+            <p class="service-detail-card__text">Spatial design for trade fairs, showrooms and cultural exhibitions. We create immersive environments that communicate clearly and memorably.</p>
+          </div>
         </div>
-        <div>
-          <input type="email" name="email" placeholder="Your email" required />
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="page-section">
+      <div class="inner">
+        <p class="section-eyebrow">process</p>
+        <h2 class="section-title">How we work</h2>
+        <div class="process-list">
+          <div class="process-step">
+            <p class="process-step__num">01</p>
+            <div>
+              <h3 class="process-step__title">Research & Discovery</h3>
+              <p class="process-step__text">We start by understanding. User interviews, competitive analysis, material research and market context form the basis of every project.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">02</p>
+            <div>
+              <h3 class="process-step__title">Concept & Strategy</h3>
+              <p class="process-step__text">Multiple directions are explored and evaluated. We align on a clear design strategy before moving into detailed development.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">03</p>
+            <div>
+              <h3 class="process-step__title">Design Development</h3>
+              <p class="process-step__text">Detailed design, 3D modelling, material specification and iterative refinement. Regular client reviews keep the project on track.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <p class="process-step__num">04</p>
+            <div>
+              <h3 class="process-step__title">Delivery & Handover</h3>
+              <p class="process-step__text">Complete production-ready files, supplier briefing documents, and brand guidelines. Ready to manufacture.</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <input type="text" name="company" placeholder="Company (optional)" />
-        </div>
-        <div>
-          <input type="text" name="subject" placeholder="Subject" />
-        </div>
-        <div class="contact-form__full">
-          <textarea name="message" placeholder="Tell us about your project…" required></textarea>
-        </div>
-        <div>
-          <button type="submit" class="contact-form__submit">Send message</button>
-        </div>
-      </form>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="page-cta">
+      <div class="inner">
+        <h2 class="page-cta__title">Have a project in mind? Let's talk.</h2>
+        <a href="contact.html" class="btn btn--filled">get in touch <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Wise Habit Agency" />
-        <img class="footer__brand-wh" src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" />
-        <div class="footer__contact">
+  <div class="footer-main">
+    <div class="footer-main__inner">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand-block">
+          <a class="footer-brand" href="https://wisehabit.com" target="_blank"><img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="Wise Habit" /></a>
+          <p class="footer-tagline">Agency for the Future</p>
+        </div>
+        <div class="footer-contact-block">
+          <p class="footer-block-label">contact</p>
           <a href="mailto:office@wisehabit.com">office@wisehabit.com</a>
           <a href="tel:+48608561173">+48 608 561 173</a>
-          <span>Warsaw, Poland</span>
+          <p>Warsaw, Poland</p>
         </div>
-        <div class="footer__socials">
-          <a href="https://www.instagram.com/wise.habit/" target="_blank">
-            <img src="https://agency.wisehabit.com/data/include/cms/Agency/utils/logos/instagram.svg" alt="Instagram" />
-          </a>
-          <a href="https://www.linkedin.com/company/wise-habit/" target="_blank">
-            <img src="https://agency.wisehabit.com/data/gfx/pol/navigation/4_4_o_329.svg" alt="LinkedIn" />
-          </a>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/wise.habit/" target="_blank" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.linkedin.com/company/wise-habit/" target="_blank" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 10v7M12 13a3 3 0 0 1 6 0v4"/></svg></a>
         </div>
       </div>
-      <div>
-        <p class="footer__nav-title">Pages</p>
-        <ul class="footer__nav-links">
-          <li><a href="sustainability.html">Sustainability</a></li>
-          <li><a href="library.html">Material Library</a></li>
-          <li><a href="design.html">Design Services</a></li>
-          <li><a href="product-implementation.html">Product Implementation</a></li>
-          <li><a href="archisnob.html">Archisnob</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer__nav-title">External</p>
-        <ul class="footer__nav-links">
-          <li><a href="https://wisehabit.com" target="_blank">wisehabit.com</a></li>
-          <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">Blog / News</a></li>
-          <li><a href="https://wisehabit.com/eng_m_awards-236.html" target="_blank">Sustainability Awards</a></li>
-        </ul>
+      <div class="footer-col footer-col--nav">
+        <p class="footer-col__heading">Explore</p>
+        <a class="footer-col__link" href="about.html">About</a>
+        <a class="footer-col__link" href="sustainability.html">Sustainability</a>
+        <a class="footer-col__link" href="product-implementation.html">Product Implementation</a>
+        <a class="footer-col__link" href="archisnob.html">Archisnob</a>
+        <a class="footer-col__link" href="library.html">Material Library</a>
+        <a class="footer-col__link" href="https://wisehabit.com/blog-eng.phtml" target="_blank">Blog</a>
       </div>
     </div>
-    <div class="footer__bottom">
-      <span>© 2024 Wise Habit Sp. z o.o. — Agency for the Future</span>
-      <span>Warsaw, Poland</span>
-    </div>
+  </div>
+  <footer class="footer-bottom">
+    <p class="footer-bottom__copy">© 2025 Wise Habit Agency for the Future</p>
   </footer>
 
-  <script src="js/main.js"></script>
   <script>
-    // Wire up hamburger
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    });
+  const PAGE_COLORS = ['#363C54','#414156','#455F2C','#35813F','#813B1B','#3C5CA9','#F47F2D'];
+  const SEG_W = 80, SPEED = 0.12;
+  const strip = document.getElementById('colorStrip');
+  function buildStrip(c) {
+    strip.innerHTML = '';
+    const reps = Math.ceil((window.innerWidth * 4) / (c.length * SEG_W)) + 2;
+    for (let i = 0; i < reps * c.length; i++) {
+      const s = document.createElement('div');
+      s.className = 'color-strip__seg';
+      s.style.cssText = `width:${SEG_W}px;background:${c[i % c.length]}`;
+      strip.appendChild(s);
+    }
+  }
+  buildStrip(PAGE_COLORS);
+  window.addEventListener('resize', () => buildStrip(PAGE_COLORS));
+  window.addEventListener('scroll', () => {
+    strip.style.transform = `translateX(${-(window.scrollY * SPEED) % (PAGE_COLORS.length * SEG_W)}px)`;
+  }, { passive: true });
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileNav.classList.toggle('open'); });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); mobileNav.classList.remove('open'); }));
   </script>
-
 </body>
 </html>
