@@ -341,6 +341,19 @@
 
         <!-- Formspree — zamień YOUR_FORM_ID na swoje ID z formspree.io -->
         <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+          <!-- Service checkboxes -->
+          <div>
+            <p class="form-chips-label">I'm interested in</p>
+            <div class="service-chips">
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Design" /> Design</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Implementation" /> Implementation</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Product Strategy" /> Product Strategy</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="ArchiSnob" /> ArchiSnob</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Other" /> Other</label>
+            </div>
+          </div>
+
           <div class="form-row">
             <div class="form-field">
               <label for="cf-name">name</label>
