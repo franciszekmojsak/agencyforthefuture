@@ -5,6 +5,211 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Agency for the Future</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── About-page specific styles ── */
+
+    /* Values: 3-col grid */
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 48px;
+    }
+    .about-value-col {
+      padding: 40px 40px 40px 0;
+      border-right: 1px solid var(--border);
+    }
+    .about-value-col:first-child { padding-left: 0; }
+    .about-value-col:last-child { border-right: none; padding-right: 0; }
+    .about-value-col__title {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .about-value-col__text {
+      font-size: 15px;
+      line-height: 1.65;
+      color: #444;
+    }
+
+    /* Office section: text left + image right */
+    .about-office-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-office-grid__text {}
+    .about-office-grid__text p.body-text + p.body-text { margin-top: 16px; }
+    .about-office-grid__img img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    /* Full-width image + quote */
+    .about-fullwidth-img {
+      position: relative;
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-h);
+    }
+    .about-fullwidth-img img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
+    .about-quote-section {
+      padding: 72px var(--pad-h);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .about-quote-title {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #888;
+      margin-bottom: 20px;
+    }
+    .about-quote-text {
+      font-size: clamp(22px, 2.2vw, 34px);
+      font-weight: 400;
+      line-height: 1.4;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Awards logos row */
+    .about-awards-section {
+      border-top: 1px solid var(--border);
+      padding: 64px var(--pad-h);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .about-awards-img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* "Let's collaborate" contact section */
+    .about-contact-section {
+      border-top: 1px solid var(--border);
+      padding: 80px var(--pad-h);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .about-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+    .about-contact-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .about-contact-title {
+      font-size: clamp(28px, 3vw, 48px);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 32px;
+    }
+    .about-contact-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .about-contact-form .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .about-contact-form label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #888;
+    }
+    .about-contact-form input,
+    .about-contact-form textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      font-family: var(--font);
+      font-size: 15px;
+      color: var(--black);
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s;
+    }
+    .about-contact-form input:focus,
+    .about-contact-form textarea:focus { border-bottom-color: var(--black); }
+    .about-contact-form textarea { resize: vertical; min-height: 100px; }
+
+    .about-service-checks {
+      margin-bottom: 24px;
+    }
+    .about-service-checks__label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .about-service-checks__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .about-service-checks__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      font-size: 14px;
+      user-select: none;
+    }
+    .about-service-checks__item input { display: none; }
+    .about-service-checks__item:has(input:checked) {
+      border-color: var(--black);
+      background: var(--black);
+      color: #fff;
+    }
+
+    .form-consent-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+    .form-consent-row input { margin-top: 3px; flex-shrink: 0; }
+
+    @media (max-width: 900px) {
+      .about-values-grid { grid-template-columns: 1fr; }
+      .about-value-col { border-right: none; border-bottom: 1px solid var(--border); padding: 32px 0; }
+      .about-value-col:last-child { border-bottom: none; }
+      .about-office-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-contact-form .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -58,122 +263,191 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero__inner">
-        <p class="hero__tag">about us</p>
-        <h1 class="hero__title">We design for the world<span class="line2">we want to live in</span></h1>
+        <p class="hero__tag">about the agency</p>
+        <h1 class="hero__title">We are a strategic design agency<span class="line2">that works for a better future</span></h1>
         <div class="hero__ctas">
           <a href="contact.html" class="btn btn--filled">get in touch <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="design.html" class="btn btn--outline">our services <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTRO TEXT -->
-    <section class="page-section">
-      <div class="page-section__inner inner">
-        <div class="page-intro-grid">
-          <div class="page-intro-grid__left">
-            <p class="section-eyebrow">who we are</p>
-            <h2 class="section-title">A studio where design meets purpose and business</h2>
-          </div>
-          <div class="page-intro-grid__right">
-            <p class="body-text">Agency for the Future is a Warsaw-based design studio operating within the Wise Habit ecosystem. We bring together designers, strategists and material specialists united by a single belief: thoughtful design can change the world.</p>
-            <p class="body-text">With over 20 years of entrepreneurial perspective, we understand both the creative and commercial dimensions of every project. We design products that are beautiful, functional and responsible — from first concept to market-ready reality.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- NUMBERS -->
-    <section class="page-section page-section--tinted">
-      <div class="inner">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <p class="stat-item__num">20+</p>
-            <p class="stat-item__label">years of entrepreneurial perspective</p>
-          </div>
-          <div class="stat-item">
-            <p class="stat-item__num">40+</p>
-            <p class="stat-item__label">European sustainable material brands</p>
-          </div>
-          <div class="stat-item">
-            <p class="stat-item__num">350+</p>
-            <p class="stat-item__label">verified suppliers & manufacturers</p>
-          </div>
-          <div class="stat-item">
-            <p class="stat-item__num">1000+</p>
-            <p class="stat-item__label">material samples in our library</p>
-          </div>
+          <a href="#learn-more" class="btn btn--outline">learn more <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
     </section>
 
     <!-- VALUES -->
-    <section class="page-section">
+    <section class="page-section" id="learn-more">
       <div class="inner">
         <p class="section-eyebrow centered">our values</p>
-        <h2 class="section-title centered">What drives every decision we make</h2>
-        <div class="values-grid">
-          <div class="value-card">
-            <p class="value-card__num">01</p>
-            <h3 class="value-card__title">Empathy first</h3>
-            <p class="value-card__text">We design by deeply understanding clients, users, and all life forms affected by our work. Empathy is not a phase — it is our foundation.</p>
+        <h2 class="section-title centered">We stand for design that creates a mindful &amp; sustainable world</h2>
+        <div class="about-values-grid">
+          <div class="about-value-col">
+            <h3 class="about-value-col__title">Design</h3>
+            <p class="about-value-col__text">We are convinced that products impact our lives. We design and implement products in a thoughtful and conscious way, taking into account social equality, respect for the environment, and the impact on the economy.</p>
           </div>
-          <div class="value-card">
-            <p class="value-card__num">02</p>
-            <h3 class="value-card__title">Holistic thinking</h3>
-            <p class="value-card__text">From research and strategy through to production and market launch — we accompany each project across its full lifecycle.</p>
+          <div class="about-value-col">
+            <h3 class="about-value-col__title">Sustainability</h3>
+            <p class="about-value-col__text">We support the path of sustainable development – taking into account the mutual relationships of society, nature, and the economy. Human and The Planet. Rethink. Reduce. Reuse. Recycle.</p>
           </div>
-          <div class="value-card">
-            <p class="value-card__num">03</p>
-            <h3 class="value-card__title">Circular by default</h3>
-            <p class="value-card__text">Sustainability is not a feature we add at the end. We embed circular thinking into every stage of the design process from day one.</p>
-          </div>
-          <div class="value-card">
-            <p class="value-card__num">04</p>
-            <h3 class="value-card__title">Diverse & inclusive</h3>
-            <p class="value-card__text">Our team brings together complementary disciplines and adaptive mindsets. Different perspectives produce better outcomes.</p>
+          <div class="about-value-col">
+            <h3 class="about-value-col__title">Awareness</h3>
+            <p class="about-value-col__text">In our fast-paced world, we lack the time to stop and enjoy the present moment. Awareness gives us a connection to ourselves and the world so that we can discover every day, anew. Balance. Soul and Body.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AWARDS -->
+    <!-- OFFICE -->
     <section class="page-section page-section--tinted">
       <div class="inner">
-        <div class="page-intro-grid">
-          <div class="page-intro-grid__left">
-            <p class="section-eyebrow">recognition</p>
-            <h2 class="section-title">International awards & acknowledgement</h2>
+        <div class="about-office-grid">
+          <div class="about-office-grid__text">
+            <p class="section-eyebrow">our office</p>
+            <h2 class="section-title">Space for meaningful designs &amp; collaborative partnerships</h2>
+            <p class="body-text" style="margin-top:24px;">Enhanced competitiveness in a rapidly evolving world, addressing the growing demand for sustainable and regenerative solutions, resilient production, and societal shifts.</p>
+            <p class="body-text" style="margin-top:16px;">Development of products tailored to the needs of users, societal and environmental concerns, fostering a long-term solutions supporting business stability and credibility.</p>
           </div>
-          <div class="page-intro-grid__right">
-            <div class="awards-list">
-              <div class="award-item">
-                <p class="award-item__name">iF Design Award 2024</p>
-                <p class="award-item__project">Wise Kitchen — modular kitchen system</p>
-              </div>
-              <div class="award-item">
-                <p class="award-item__name">Red Dot Winner 2023</p>
-                <p class="award-item__project">Moment Watch — minimalist automatic timepiece</p>
-              </div>
-              <div class="award-item">
-                <p class="award-item__name">Designer of the Year 2023</p>
-                <p class="award-item__project">Polish Institute of Design</p>
-              </div>
-              <div class="award-item">
-                <p class="award-item__name">A'Design Award Winner 2022</p>
-                <p class="award-item__project">Moment Watch — product design</p>
-              </div>
-            </div>
+          <div class="about-office-grid__img">
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/about/Image_23.png" alt="Our office" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="page-cta">
-      <div class="inner">
-        <h2 class="page-cta__title">Ready to create something meaningful?</h2>
-        <a href="contact.html" class="btn btn--filled">start a conversation <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <!-- SERVICES -->
+    <section class="services">
+      <div class="services__header inner">
+        <p class="services__eyebrow">services</p>
+        <h2 class="services__title">We are convinced the change starts<br>from design and designers</h2>
+      </div>
+      <div class="services__grid">
+        <div class="service-col">
+          <div class="service-col__head">
+            <p class="service-col__title">Design</p>
+            <a href="design.html"><svg class="service-col__arrow icon-arr" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+          <ul class="service-col__list">
+            <li>Product Research &amp; Strategy</li>
+            <li>Circular Design Strategies</li>
+            <li>UX/UI Design</li>
+            <li>Graphic Design</li>
+            <li>Packaging Design</li>
+            <li>Exhibition Design</li>
+          </ul>
+        </div>
+        <div class="service-col">
+          <div class="service-col__head">
+            <p class="service-col__title">Strategy</p>
+            <a href="design.html"><svg class="service-col__arrow icon-arr" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+          <ul class="service-col__list">
+            <li>Market &amp; Trends Analysis</li>
+            <li>Product Vision</li>
+            <li>Product Pricing</li>
+            <li>Sales Strategy</li>
+            <li>Implementation Plan</li>
+            <li>Marketing &amp; Sales Assets</li>
+          </ul>
+        </div>
+        <div class="service-col">
+          <div class="service-col__head">
+            <p class="service-col__title">Production</p>
+            <a href="product-implementation.html"><svg class="service-col__arrow icon-arr" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+          <ul class="service-col__list">
+            <li>Supplier Sourcing</li>
+            <li>Production Budget</li>
+            <li>Prototyping</li>
+            <li>Production Supervision</li>
+          </ul>
+        </div>
+        <div class="service-col">
+          <div class="service-col__head">
+            <p class="service-col__title">More ✦</p>
+          </div>
+          <ul class="service-col__list">
+            <li>New Brand &amp; Identity</li>
+            <li>Branding &amp; Communication</li>
+            <li>Intellectual Property Support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL-WIDTH IMAGE + QUOTE -->
+    <section style="padding: 64px 0 0;">
+      <div class="about-fullwidth-img">
+        <img src="https://agency.wisehabit.com/data/include/cms/Agency/about/Image_22.png" alt="Design for meanings, feelings and business" />
+      </div>
+      <div class="about-quote-section">
+        <p class="about-quote-title">Design for meanings, feelings and business</p>
+        <p class="about-quote-text">Holistic perspective is at heart of everything we do as we recognize the interconnectedness of all our actions and creations.</p>
+      </div>
+    </section>
+
+    <!-- AWARDS LOGOS -->
+    <section style="border-top: 1px solid var(--border);">
+      <div class="about-awards-section">
+        <img class="about-awards-img" src="https://agency.wisehabit.com/data/include/cms/Agency/about/Awards2.png" alt="must have, iF Design Award 2024, Red Dot 2023, A'Design Award 2022, iF Design Award 2022" />
+      </div>
+    </section>
+
+    <!-- LET'S COLLABORATE CONTACT -->
+    <section style="border-top: 1px solid var(--border);" id="contact">
+      <div class="about-contact-section">
+        <div class="about-contact-grid">
+
+          <!-- LEFT: heading -->
+          <div>
+            <p class="about-contact-label">contact</p>
+            <h2 class="about-contact-title">Let's collaborate</h2>
+            <div class="footer-contact-block" style="margin-top: 0;">
+              <a href="mailto:office@wisehabit.com" style="font-size:15px;">office@wisehabit.com</a><br>
+              <a href="tel:+48608561173" style="font-size:15px;">+48 608 561 173</a><br>
+              <p style="font-size:15px; margin-top:4px;">Warsaw, Poland</p>
+            </div>
+          </div>
+
+          <!-- RIGHT: form -->
+          <div>
+            <form class="about-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+              <!-- Service checkboxes -->
+              <div class="about-service-checks">
+                <p class="about-service-checks__label">I'm interested in</p>
+                <div class="about-service-checks__grid">
+                  <label class="about-service-checks__item"><input type="checkbox" name="service[]" value="Design" /> Design</label>
+                  <label class="about-service-checks__item"><input type="checkbox" name="service[]" value="Implementation" /> Implementation</label>
+                  <label class="about-service-checks__item"><input type="checkbox" name="service[]" value="Product Strategy" /> Product Strategy</label>
+                  <label class="about-service-checks__item"><input type="checkbox" name="service[]" value="ArchiSnob" /> ArchiSnob</label>
+                  <label class="about-service-checks__item"><input type="checkbox" name="service[]" value="Other" /> Other</label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="ac-name">name</label>
+                  <input type="text" id="ac-name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-field">
+                  <label for="ac-company">company</label>
+                  <input type="text" id="ac-company" name="company" placeholder="Your company" />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="ac-email">email</label>
+                <input type="email" id="ac-email" name="email" placeholder="your@email.com" required />
+              </div>
+              <div class="form-field">
+                <label for="ac-message">message</label>
+                <textarea id="ac-message" name="message" placeholder="Tell us about your project..." required></textarea>
+              </div>
+              <div class="form-consent-row">
+                <input type="checkbox" id="ac-consent" name="consent" required />
+                <label for="ac-consent">I agree to the processing of my personal data for the purpose of responding to my inquiry.</label>
+              </div>
+              <button type="submit" class="btn btn--filled">send message →</button>
+            </form>
+          </div>
+
+        </div>
       </div>
     </section>
 
