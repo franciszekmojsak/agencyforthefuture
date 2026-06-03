@@ -45,8 +45,7 @@
     }
     .about-quote__sup {
       font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
       opacity: 0.45;
       margin-bottom: 20px;
     }
@@ -59,14 +58,7 @@
       letter-spacing: -0.3px;
     }
 
-    /* Awards row */
-    .about-awards-wrap {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 64px var(--pad-h);
-      border-top: 1px solid var(--border);
-    }
-    .about-awards-wrap img { max-width: 100%; height: auto; display: block; }
+    .about-awards-img { max-width: 100%; height: auto; display: block; }
 
     @media (max-width: 900px) {
       .about-office-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -174,17 +166,14 @@
       </div>
       <div class="agency-intro__cards">
         <div class="intro-card">
-          <img class="intro-card__icon" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/design_services_ico_3.svg" alt="" />
           <h3 class="intro-card__title">Design</h3>
           <p class="intro-card__text">We are convinced that products impact our lives. We design and implement products in a thoughtful and conscious way, taking into account social equality, respect for the environment, and the impact on the economy.</p>
         </div>
         <div class="intro-card">
-          <img class="intro-card__icon" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/STRZALKI_ico_2.svg" alt="" />
           <h3 class="intro-card__title">Sustainability</h3>
           <p class="intro-card__text">We support the path of sustainable development – taking into account the mutual relationships of society, nature, and the economy. Human and The Planet. Rethink. Reduce. Reuse. Recycle.</p>
         </div>
         <div class="intro-card">
-          <img class="intro-card__icon" src="https://agency.wisehabit.com/data/include/cms/Agency/homepage/figma-test/lib_of_mat_ico_4.svg" alt="" />
           <h3 class="intro-card__title">Awareness</h3>
           <p class="intro-card__text">In our fast-paced world, we lack the time to stop and enjoy the present moment. Awareness gives us a connection to ourselves and the world so that we can discover every day, anew. Balance. Soul and Body.</p>
         </div>
@@ -280,8 +269,10 @@
     </section>
 
     <!-- ══ AWARDS ══ -->
-    <div class="about-awards-wrap">
-      <img src="https://agency.wisehabit.com/data/include/cms/Agency/about/Awards2.png" alt="must have · iF Design Award 2024 · Red Dot 2023 · A'Design Award 2022 · iF Design Award 2022" />
+    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-h);">
+      <div style="border-top: 1px solid var(--border); padding: 64px 0;">
+        <img class="about-awards-img" src="https://agency.wisehabit.com/data/include/cms/Agency/about/Awards2.png" alt="must have · iF Design Award 2024 · Red Dot 2023 · A'Design Award 2022 · iF Design Award 2022" />
+      </div>
     </div>
 
     <!-- ══ CONTACT ══ -->
