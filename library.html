@@ -53,7 +53,7 @@
       display: grid;
       grid-template-columns: 48px 1fr;
       gap: 0;
-      padding: 28px 0;
+      padding: 16px 0;
       border-bottom: 1px solid var(--border);
     }
     .lib-gain-item:first-child { border-top: 1px solid var(--border); }
@@ -177,30 +177,24 @@
       </div>
     </section>
 
-    <!-- ══ INTRO ══ -->
-    <section class="page-section">
-      <div class="inner">
-        <div class="page-intro-grid">
-          <div class="page-intro-grid__left">
-            <p class="section-eyebrow">Wise Habit Library of Sustainable Materials</p>
-            <h2 class="section-title">We are convinced the change starts from design and designers</h2>
-          </div>
-          <div class="page-intro-grid__right" style="padding-top: 8px;">
-            <div class="lib-intro-grid" style="margin-top: 0;">
-              <div class="lib-intro-col">
-                <h3 class="lib-intro-col__title">Aim of the Library</h3>
-                <p class="lib-intro-col__text">We provide a comprehensive collection of regenerative and sustainable materials that considers various factors such as the origin of material, its lifecycle, biodegradability or recyclability potential and its application in design.</p>
-              </div>
-              <div class="lib-intro-col">
-                <h3 class="lib-intro-col__title">Empowerment of designers</h3>
-                <p class="lib-intro-col__text">We are committed to empower designers and architects with the knowledge and resources necessary to make conscious and responsible design decisions that contribute to environmental preservation and sustainable development.</p>
-              </div>
-              <div class="lib-intro-col">
-                <h3 class="lib-intro-col__title">Access to Library</h3>
-                <p class="lib-intro-col__text">Located in Warsaw, our library is both a physical &amp; online resource for sustainable and regenerative materials.</p>
-              </div>
-            </div>
-          </div>
+    <!-- ══ AGENCY-INTRO ══ -->
+    <section class="agency-intro" id="learn-more">
+      <div class="agency-intro__top">
+        <p class="agency-intro__eyebrow">Wise Habit Library of Sustainable Materials</p>
+        <h2 class="agency-intro__title">We are convinced the change starts from design and designers</h2>
+      </div>
+      <div class="agency-intro__cards">
+        <div class="intro-card">
+          <h3 class="intro-card__title" style="font-weight:400;">Aim of the Library</h3>
+          <p class="intro-card__text">We provide a comprehensive collection of regenerative and sustainable materials that considers various factors such as the origin of material, its lifecycle, biodegradability or recyclability potential and its application in design.</p>
+        </div>
+        <div class="intro-card">
+          <h3 class="intro-card__title" style="font-weight:400;">Empowerment of designers</h3>
+          <p class="intro-card__text">We are committed to empower designers and architects with the knowledge and resources necessary to make conscious and responsible design decisions that contribute to environmental preservation and sustainable development.</p>
+        </div>
+        <div class="intro-card">
+          <h3 class="intro-card__title" style="font-weight:400;">Access to Library</h3>
+          <p class="intro-card__text">Located in Warsaw, our library is both a physical &amp; online resource for sustainable and regenerative materials.</p>
         </div>
       </div>
     </section>
@@ -257,11 +251,50 @@
       </div>
     </section>
 
-    <!-- ══ CTA ══ -->
-    <section class="page-cta">
-      <div class="inner">
-        <h2 class="page-cta__title">Interested in exploring our material library?</h2>
-        <a href="contact.html" class="btn btn--filled">get in touch <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <!-- ══ CONTACT ══ -->
+    <section class="contact-wrap" id="contact">
+      <div class="contact-wrap__inner">
+        <p class="contact-wrap__label">contact</p>
+        <h2 class="contact-wrap__title">Get in touch</h2>
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div>
+            <p class="form-chips-label">I'm interested in</p>
+            <div class="service-chips">
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Design" /> Design</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Implementation" /> Implementation</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Product Strategy" /> Product Strategy</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="ArchiSnob" /> ArchiSnob</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Other" /> Other</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="lib-name">name</label>
+              <input type="text" id="lib-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label for="lib-company">company</label>
+              <input type="text" id="lib-company" name="company" placeholder="Your company" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="lib-email">email</label>
+            <input type="email" id="lib-email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-field">
+            <label for="lib-subject">subject</label>
+            <input type="text" id="lib-subject" name="subject" placeholder="What can we help you with?" />
+          </div>
+          <div class="form-field">
+            <label for="lib-message">message</label>
+            <textarea id="lib-message" name="message" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="lib-consent" name="consent" required />
+            <label for="lib-consent">I agree to the processing of my personal data for the purpose of responding to my inquiry.</label>
+          </div>
+          <button type="submit" class="btn btn--filled form-submit">send message →</button>
+        </form>
       </div>
     </section>
 
