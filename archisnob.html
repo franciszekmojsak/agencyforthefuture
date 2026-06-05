@@ -3,18 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Archisnob — Agency for the Future</title>
+  <title>ArchiSnob — Wise Habit Agency for the Future</title>
+  <meta name="description" content="Wise Habit x ArchiSnob — a new partnership combining design, architecture and culture." />
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── ArchiSnob partnership grid (2 × 3) ── */
+    .partnership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px 64px;
+      margin-top: 56px;
+    }
+    .partnership-card__title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .partnership-card__text {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: #333;
+    }
+
+    /* ── Video block ── */
+    .archisnob-video {
+      padding: 0 var(--pad-h);
+      max-width: var(--max-w);
+      margin: 64px auto;
+    }
+    .archisnob-video__wrap {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 16/7;
+      background: #111;
+    }
+    .archisnob-video__wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ── Focus Areas ── */
+    .focus-areas {
+      padding: 80px var(--pad-h);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .focus-areas__title {
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+    .focus-areas__list {
+      list-style: none;
+      max-width: 600px;
+    }
+    .focus-areas__item {
+      font-size: 1rem;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .focus-areas__item:first-child { border-top: 1px solid var(--border); }
+
+    /* ── Magazine split section ── */
+    .magazine-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      padding: 80px var(--pad-h);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .magazine-split--reverse { direction: rtl; }
+    .magazine-split--reverse > * { direction: ltr; }
+    .magazine-split__img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .magazine-split__eyebrow {
+      font-size: 0.8125rem;
+      letter-spacing: 0.04em;
+      color: #666;
+      margin-bottom: 16px;
+    }
+    .magazine-split__title {
+      font-size: clamp(1.75rem, 3.5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .magazine-split__body {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #333;
+    }
+    .magazine-split__body p + p { margin-top: 16px; }
+
+    /* ── Magazine launches (text left + 2 images right) ── */
+    .launches-section {
+      padding: 80px var(--pad-h);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .launches-section__title {
+      font-size: clamp(1.75rem, 3.5vw, 3rem);
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+    .launches-section__body {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #333;
+    }
+    .launches-section__body p + p { margin-top: 16px; }
+    .launches-section__images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .launches-section__images img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* ── Salon + Talks 2-col ── */
+    .salon-talks {
+      padding: 80px var(--pad-h);
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .salon-talks__title {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .salon-talks__body {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 24px;
+    }
+    .salon-talks__img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 24px;
+      object-fit: cover;
+    }
+
+    /* ── Section tinted bg ── */
+    .archisnob-tinted {
+      background: #f0ede8;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .partnership-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .magazine-split,
+      .launches-section,
+      .salon-talks { grid-template-columns: 1fr; gap: 40px; }
+      .magazine-split--reverse { direction: ltr; }
+      .launches-section__images img { height: 180px; }
+    }
+    @media (max-width: 600px) {
+      .partnership-grid { grid-template-columns: 1fr; }
+      .launches-section__images { grid-template-columns: 1fr; }
+      .archisnob-video { padding: 0 20px; margin: 40px auto; }
+      .focus-areas,
+      .magazine-split,
+      .launches-section,
+      .salon-talks { padding: 48px 20px; }
+    }
+  </style>
 </head>
 <body>
 
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav__inner">
       <div class="nav__logo">
-        <a class="nav__logo-agency" href="index.html"><img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Agency for the Future" /></a>
-        <a class="nav__logo-wh" href="https://wisehabit.com" target="_blank"><img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" /></a>
+        <a class="nav__logo-agency" href="index.html">
+          <img src="https://agency.wisehabit.com/data/gfx/mask/eng/logo_5_small.svg" alt="Agency for the Future" />
+        </a>
+        <a class="nav__logo-wh" href="https://wisehabit.com" target="_blank">
+          <img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="wisehabit.com" />
+        </a>
       </div>
-            <ul class="nav__links">
+      <ul class="nav__links">
         <li class="nav__dropdown"><span>about ▾</span>
           <div class="nav__dropdown-menu">
             <a href="about.html">overview</a>
@@ -23,7 +213,7 @@
             <a href="clients.html">clients</a>
           </div>
         </li>
-        <li ><a href="sustainability.html">sustainability</a></li>
+        <li><a href="sustainability.html">sustainability</a></li>
         <li class="nav__dropdown"><span>services ▾</span>
           <div class="nav__dropdown-menu">
             <a href="design.html">design</a>
@@ -40,14 +230,15 @@
         </li>
         <li class="active"><a href="archisnob.html">archisnob</a></li>
         <li><a href="#">B2B sales</a></li>
-        <li ><a href="contact.html">contact</a></li>
+        <li><a href="contact.html">contact</a></li>
         <li><a href="https://wisehabit.com/blog-eng.phtml" target="_blank">news</a></li>
       </ul>
       <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
 
-    <div class="nav__mobile" id="mobileNav">
+  <!-- MOBILE NAV -->
+  <div class="nav__mobile" id="mobileNav">
     <ul class="nav__mobile-links">
       <li><span>about</span>
         <ul class="nav__mobile-sub">
@@ -79,107 +270,216 @@
     </ul>
   </div>
 
+  <!-- COLOR STRIP -->
   <div class="color-strip-wrapper">
     <div class="color-strip" id="colorStrip"></div>
   </div>
 
   <main class="page-content">
 
-    <!-- HERO -->
+    <!-- ══ HERO ══ -->
     <section class="hero">
       <div class="hero__inner">
-        <p class="hero__tag">archisnob</p>
-        <h1 class="hero__title">Where architecture meets<span class="line2">design culture</span></h1>
+        <p class="hero__tag">new partnership</p>
+        <h1 class="hero__title">Wise Habit x<span class="line2">ArchiSnob</span></h1>
         <div class="hero__ctas">
-          <a href="contact.html" class="btn btn--filled">get in touch <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="library.html" class="btn btn--outline">material library <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#contact" class="btn btn--filled">
+            let's collaborate
+            <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- INTRO -->
-    <section class="page-section">
-      <div class="inner">
-        <div class="page-intro-grid">
-          <div class="page-intro-grid__left">
-            <p class="section-eyebrow">about archisnob</p>
-            <h2 class="section-title">A platform for architecture, design and sustainable living</h2>
-          </div>
-          <div class="page-intro-grid__right">
-            <p class="body-text">Archisnob is the cultural and educational arm of Wise Habit — a platform dedicated to exploring the intersections of architecture, interior design, sustainable materials and contemporary design culture.</p>
-            <p class="body-text">Through conferences, exhibitions, workshops and editorial content, Archisnob brings together architects, designers, material specialists and industry leaders to share knowledge and inspire better practice.</p>
+    <!-- ══ PARTNERSHIP GRID 2×3 ══ -->
+    <section class="agency-intro archisnob-tinted">
+      <div class="agency-intro__top">
+        <p class="agency-intro__eyebrow">about ArchiSnob</p>
+        <h2 class="agency-intro__title">Our partnership includes:</h2>
+      </div>
+      <div class="partnership-grid" style="max-width: var(--max-w); margin-left: auto; margin-right: auto; padding-left: var(--pad-h); padding-right: var(--pad-h); padding-bottom: 80px;">
+        <!-- Row 1 -->
+        <div class="partnership-card">
+          <h3 class="partnership-card__title">ArchiSnob Magazine</h3>
+          <p class="partnership-card__text">ArchiSnob inspires conversations on architecture and design, combining critical thinking with real impact to shape the industry dialogue.</p>
+        </div>
+        <div class="partnership-card">
+          <h3 class="partnership-card__title">Magazine Launches</h3>
+          <p class="partnership-card__text">ArchiSnob hosts original events in inspiring spaces, where architecture, music, and culture come together to tell one story.</p>
+        </div>
+        <div class="partnership-card">
+          <h3 class="partnership-card__title">Salon Warszawski</h3>
+          <p class="partnership-card__text">Marcin Szczelina's show where cuisine meets architecture through inspiring guests and conversations.</p>
+        </div>
+        <!-- Row 2 -->
+        <div class="partnership-card">
+          <h3 class="partnership-card__title">Curated Talks &amp; Conferences</h3>
+          <p class="partnership-card__text">Marcin Szczelina shares his expertise on architecture, design, and sustainability at conferences and industry events worldwide.</p>
+        </div>
+        <div class="partnership-card">
+          <h3 class="partnership-card__title">ArchiSnob Online</h3>
+          <p class="partnership-card__text">ArchiSnob.com is a vibrant digital space where architecture, design, and culture meet, extending the magazine beyond print.</p>
+        </div>
+        <div class="partnership-card">
+          <h3 class="partnership-card__title">Jury Participation</h3>
+          <p class="partnership-card__text">Marcin Szczelina has served as juror at leading events, including the Mies van der Rohe Award, SIMON Prize, and Venice Architecture Biennale.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ SALON WARSZAWSKI VIDEO ══ -->
+    <div class="archisnob-video">
+      <div class="archisnob-video__wrap">
+        <!-- Replace VIDEO_ID with the actual YouTube video ID -->
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLarchisnob"
+          title="Salon Warszawski"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- ══ FOCUS AREAS ══ -->
+    <section class="focus-areas">
+      <h2 class="focus-areas__title">ArchiSnob Focus Areas:</h2>
+      <ul class="focus-areas__list">
+        <li class="focus-areas__item">1 – Architecture</li>
+        <li class="focus-areas__item">2 – Design</li>
+        <li class="focus-areas__item">3 – Culture &amp; Art</li>
+        <li class="focus-areas__item">4 – Lifestyle</li>
+      </ul>
+    </section>
+
+    <!-- ══ ARCHISNOB MAGAZINE ══ -->
+    <section style="background: #fff;">
+      <div class="magazine-split">
+        <div>
+          <img
+            class="magazine-split__img"
+            src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/archisnob_cover.jpg"
+            alt="ArchiSnob Magazine"
+            onerror="this.style.background='#e8e4dc';this.style.minHeight='480px';this.removeAttribute('src')"
+          />
+        </div>
+        <div>
+          <h2 class="magazine-split__title">ArchiSnob</h2>
+          <div class="magazine-split__body">
+            <p>ArchiSnob is an independent platform of ideas shaping the conversation about architecture, design, and the culture of space. The magazine speaks to those who don't just observe change, but actively help shape the future of cities. Published simultaneously in Polish and English, it reaches both local readers and the international community of architects, designers, and curators. Its content goes beyond trends, remaining relevant over time and inspiring reflection and critical thinking about the spaces we inhabit.</p>
+            <p>Working with leading critics, curators, and experts from Poland and abroad, ArchiSnob's articles and interviews are cited in the media, discussed at conferences, and used in industry reports. The magazine not only documents change but anticipates it, offering insights for readers who want to understand design processes, investment decisions, and the lasting impact of architecture on culture, society, and city life.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ACTIVITIES -->
-    <section class="page-section page-section--tinted">
-      <div class="inner">
-        <p class="section-eyebrow centered">what we do</p>
-        <h2 class="section-title centered">Events, exhibitions and knowledge sharing</h2>
-        <div class="values-grid">
-          <div class="value-card">
-            <p class="value-card__num">01</p>
-            <h3 class="value-card__title">Conferences</h3>
-            <p class="value-card__text">Annual gatherings bringing together practitioners, researchers and innovators to discuss the future of architecture and sustainable design.</p>
+    <!-- ══ MAGAZINE LAUNCHES ══ -->
+    <section>
+      <div class="launches-section">
+        <div>
+          <h2 class="launches-section__title">Magazine Launches</h2>
+          <div class="launches-section__body">
+            <p>Each issue of ArchiSnob is launched with a special event designed as a cultural experience. Over the years, these premieres have taken place in iconic locations and remarkable interiors. In recent editions, they have been hosted at the National Library in Warsaw. New issues are now complemented by thematic one-day conferences, creating an extended platform for discussion.</p>
+            <p>The events bring together the architectural community and have become an important meeting point for the industry in Poland. More than 400 architects from leading Polish design studios attend, along with curators, investors, critics, and opinion leaders. Each premiere also features a concert by a Polish music star or a specially created performance, adding a unique narrative to every issue.</p>
           </div>
-          <div class="value-card">
-            <p class="value-card__num">02</p>
-            <h3 class="value-card__title">Exhibitions</h3>
-            <p class="value-card__text">Curated material exhibitions at trade fairs and design weeks — including Architect@Work Warsaw and Prague — showcasing sustainable material innovations.</p>
-          </div>
-          <div class="value-card">
-            <p class="value-card__num">03</p>
-            <h3 class="value-card__title">Workshops</h3>
-            <p class="value-card__text">Hands-on workshops for architects and designers exploring material qualities, circular design methods and sustainable specification processes.</p>
-          </div>
-          <div class="value-card">
-            <p class="value-card__num">04</p>
-            <h3 class="value-card__title">Editorial</h3>
-            <p class="value-card__text">Longform content, interviews and case studies exploring meaningful design projects, innovative materials and emerging practices from across Europe.</p>
+        </div>
+        <div>
+          <div class="launches-section__images">
+            <img
+              src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/launch_1.jpg"
+              alt="Magazine Launch event"
+              onerror="this.style.background='#d2cec8';this.removeAttribute('src')"
+            />
+            <img
+              src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/launch_2.jpg"
+              alt="PULSE Architecture Festival"
+              onerror="this.style.background='#c8b8b0';this.removeAttribute('src')"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PAST EVENTS -->
-    <section class="page-section">
-      <div class="inner">
-        <p class="section-eyebrow">highlights</p>
-        <h2 class="section-title">Recent exhibitions & events</h2>
-        <div class="awards-list">
-          <div class="award-item">
-            <p class="award-item__name">House of Sustainable Materials — Architect@Work Warsaw</p>
-            <p class="award-item__project">Exhibition design & implementation — Wise Habit Library presentation</p>
-          </div>
-          <div class="award-item">
-            <p class="award-item__name">House of Sustainable Materials — Architect@Work Prague</p>
-            <p class="award-item__project">Exhibition design & implementation — Central European tour</p>
-          </div>
-          <div class="award-item">
-            <p class="award-item__name">Sustainability in Product Design — Conference</p>
-            <p class="award-item__project">Panel discussions on circular design and material innovation</p>
-          </div>
+    <!-- ══ SALON WARSZAWSKI + TALKS ══ -->
+    <section style="background: #fff;">
+      <div class="salon-talks">
+        <!-- Salon Warszawski -->
+        <div>
+          <h2 class="salon-talks__title">Salon Warszawski</h2>
+          <p class="salon-talks__body">Marcin Szczelina's personal show, where his two biggest passions — architecture and cooking — meet around the table. Each episode, he welcomes guests from architecture, design, and culture, preparing dishes inspired by classic Polish flavors with a modern twist. The show creates a space for thoughtful conversations about today's architecture, which Marcin loves to share. Every episode blends food and inspiring chats, offering fresh ways to see our world. SGI is the main partner for season two. You can watch it on <a href="https://www.youtube.com" target="_blank" style="text-decoration: underline;">YouTube</a>.</p>
+          <img
+            class="salon-talks__img"
+            src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/salon_warszawski.jpg"
+            alt="Salon Warszawski"
+            onerror="this.style.background='#e0d8d0';this.style.minHeight='300px';this.removeAttribute('src')"
+          />
+        </div>
+        <!-- Talks & Conferences -->
+        <div>
+          <h2 class="salon-talks__title">Talks &amp; Conferences</h2>
+          <p class="salon-talks__body">Marcin Szczelina combines his passion for architecture, design, and sustainable development, working actively in Poland and internationally. He is the chief curator of the PULSE international architecture festival, an expert for the Mies van der Rohe Award, and a member of the Advisory Board of the Czech Pavilion at the Venice Architecture Biennale.</p>
+          <p class="salon-talks__body" style="margin-top: 16px;">In 2020, he became the first Pole to create a project at the Mies van der Rohe Pavilion in Barcelona, together with artist Katarzyna Krakowiak. As an author and co-author of numerous publications in international magazines such as Domus, Aesthetica, and Azure, he shares his expertise at conferences and industry events worldwide.</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="page-cta">
-      <div class="inner">
-        <h2 class="page-cta__title">Interested in partnering with Archisnob?</h2>
-        <a href="contact.html" class="btn btn--filled">get in touch <svg class="icon-arr" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1.5 6.5H11.5M7.5 2.5L11.5 6.5L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <!-- ══ CONTACT FORM ══ -->
+    <section class="contact-wrap" id="contact">
+      <div class="contact-wrap__inner">
+        <p class="contact-wrap__label">contact</p>
+        <h2 class="contact-wrap__title">Let's collaborate</h2>
+
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div>
+            <p class="form-chips-label">I'm interested in</p>
+            <div class="service-chips">
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Design" /> Design</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Implementation" /> Implementation</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Product Strategy" /> Product Strategy</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="ArchiSnob" /> ArchiSnob</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Other" /> Other</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label for="cf-company">company</label>
+              <input type="text" id="cf-company" name="company" placeholder="Your company" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">email</label>
+            <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What can we help you with?" />
+          </div>
+          <div class="form-field">
+            <label for="cf-message">message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="cf-consent" name="consent" required />
+            <label for="cf-consent">I agree to the processing of my personal data for the purpose of responding to my inquiry.</label>
+          </div>
+          <button type="submit" class="btn btn--filled form-submit">send message →</button>
+        </form>
       </div>
     </section>
 
   </main>
 
+  <!-- ══ FOOTER ══ -->
   <div class="footer-main">
     <div class="footer-main__inner">
       <div class="footer-col footer-col--brand">
         <div class="footer-brand-block">
-          <a class="footer-brand" href="https://wisehabit.com" target="_blank"><img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="Wise Habit" /></a>
+          <a class="footer-brand" href="https://wisehabit.com" target="_blank">
+            <img src="https://agency.wisehabit.com/data/include/cms/WH_head.svg" alt="Wise Habit" />
+          </a>
           <p class="footer-tagline">Agency for the Future</p>
         </div>
         <div class="footer-contact-block">
@@ -189,17 +489,21 @@
           <p>Warsaw, Poland</p>
         </div>
         <div class="footer-social">
-          <a href="https://www.instagram.com/wise.habit/" target="_blank" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://www.linkedin.com/company/wise-habit/" target="_blank" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 10v7M12 13a3 3 0 0 1 6 0v4"/></svg></a>
+          <a href="https://www.instagram.com/wise.habit/" target="_blank" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/wise-habit/" target="_blank" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 10v7M12 13a3 3 0 0 1 6 0v4"/></svg>
+          </a>
         </div>
       </div>
       <div class="footer-col footer-col--nav">
         <p class="footer-col__heading">Explore</p>
-        <a class="footer-col__link" href="about.html">About</a>
         <a class="footer-col__link" href="sustainability.html">Sustainability</a>
+        <a class="footer-col__link" href="library.html">Material Library</a>
+        <a class="footer-col__link" href="https://wisehabit.com/eng_m_awards-236.html" target="_blank">Sustainability Awards</a>
         <a class="footer-col__link" href="design.html">Design Services</a>
         <a class="footer-col__link" href="product-implementation.html">Product Implementation</a>
-        <a class="footer-col__link" href="library.html">Material Library</a>
         <a class="footer-col__link" href="https://wisehabit.com/blog-eng.phtml" target="_blank">Blog</a>
       </div>
     </div>
@@ -209,7 +513,8 @@
   </footer>
 
   <script>
-  const PAGE_COLORS = ['#55926B','#CCDBDF','#A5BFCA','#89A8AB'];
+  /* ── COLOR STRIP ── */
+  const PAGE_COLORS = ['#363C54','#414156','#455F2C','#35813F','#3C5CA9','#55926B','#CCDBDF','#A5BFCA'];
   const SEG_W = 80, SPEED = 0.12;
   const strip = document.getElementById('colorStrip');
   function buildStrip(c) {
@@ -227,10 +532,18 @@
   window.addEventListener('scroll', () => {
     strip.style.transform = `translateX(${-(window.scrollY * SPEED) % (PAGE_COLORS.length * SEG_W)}px)`;
   }, { passive: true });
+
+  /* ── HAMBURGER ── */
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
-  hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileNav.classList.toggle('open'); });
-  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); mobileNav.classList.remove('open'); }));
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+  }));
   </script>
 </body>
 </html>
