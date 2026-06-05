@@ -105,43 +105,9 @@
     }
     .magazine-split__body p + p { margin-top: 16px; }
 
-    /* ── Magazine launches (text left + 2 images right) ── */
-    .launches-section {
-      padding: 80px var(--pad-h);
-      max-width: var(--max-w);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: stretch;
-    }
-    .launches-section__title {
-      font-size: clamp(32px, 4vw, 56px);
-      font-weight: 400;
-      line-height: 1.1;
-      letter-spacing: -0.5px;
-      margin-bottom: 24px;
-    }
-    .launches-section__body {
-      font-size: 20px;
-      line-height: 1.8;
-      color: #333;
-    }
-    .launches-section__body p + p { margin-top: 16px; }
-    .launches-section__images {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-self: stretch;
-    }
-    .launches-section__images img {
-      width: 100%;
-      height: 100%;
-      min-height: 300px;
-      object-fit: cover;
-      border-radius: 8px;
-      display: block;
-    }
+    /* ── Magazine launches — używa page-intro-grid + sust-impact-imgs z sustainability ── */
+    .sust-impact-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .sust-impact-imgs img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; display: block; border-radius: 4px; }
 
     /* ── Salon + Talks 2-col ── */
     .salon-talks {
@@ -182,10 +148,10 @@
     @media (max-width: 900px) {
       .partnership-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
       .magazine-split,
-      .launches-section,
       .salon-talks { grid-template-columns: 1fr; gap: 40px; }
       .magazine-split--reverse { direction: ltr; }
-      .launches-section__images img { height: 180px; }
+      .sust-impact-imgs { grid-template-columns: 1fr; }
+      .sust-impact-imgs img { height: 240px; }
     }
     @media (max-width: 600px) {
       .partnership-grid { grid-template-columns: 1fr; }
@@ -193,7 +159,6 @@
       .archisnob-video { padding: 0 20px; margin: 40px auto; }
       .focus-areas,
       .magazine-split,
-      .launches-section,
       .salon-talks { padding: 48px 20px; }
     }
   </style>
@@ -373,25 +338,17 @@
     </section>
 
     <!-- ══ MAGAZINE LAUNCHES ══ -->
-    <section style="background: #fff;">
-      <div class="launches-section">
-        <div>
-          <h2 class="launches-section__title">Magazine Launches</h2>
-          <div class="launches-section__body">
-            <p>Each issue of ArchiSnob is launched with a special event designed as a cultural experience. Over the years, these premieres have taken place in iconic locations and remarkable interiors. In recent editions, they have been hosted at the National Library in Warsaw. New issues are now complemented by thematic one-day conferences, creating an extended platform for discussion.</p>
-            <p>The events bring together the architectural community and have become an important meeting point for the industry in Poland. More than 400 architects from leading Polish design studios attend, along with curators, investors, critics, and opinion leaders. Each premiere also features a concert by a Polish music star or a specially created performance, adding a unique narrative to every issue.</p>
+    <section class="page-section" style="background: #fff;">
+      <div class="inner">
+        <div class="page-intro-grid" style="align-items: stretch;">
+          <div class="launches-text">
+            <h2 class="section-title">Magazine Launches</h2>
+            <p class="body-text">Each issue of ArchiSnob is launched with a special event designed as a cultural experience. Over the years, these premieres have taken place in iconic locations and remarkable interiors. In recent editions, they have been hosted at the National Library in Warsaw. New issues are now complemented by thematic one-day conferences, creating an extended platform for discussion.</p>
+            <p class="body-text">The events bring together the architectural community and have become an important meeting point for the industry in Poland. More than 400 architects from leading Polish design studios attend, along with curators, investors, critics, and opinion leaders. Each premiere also features a concert by a Polish music star or a specially created performance, adding a unique narrative to every issue.</p>
           </div>
-        </div>
-        <div>
-          <div class="launches-section__images">
-            <img
-              src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/photo77.webp"
-              alt="Magazine Launch event"
-            />
-            <img
-              src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/photo79.webp"
-              alt="PULSE Architecture Festival"
-            />
+          <div class="sust-impact-imgs">
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/photo77.webp" alt="Magazine Launch event" />
+            <img src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/photo79.webp" alt="PULSE Architecture Festival" />
           </div>
         </div>
       </div>
