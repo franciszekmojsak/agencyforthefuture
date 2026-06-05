@@ -15,37 +15,36 @@
       margin-top: 56px;
     }
     .partnership-card__title {
-      font-size: 1rem;
+      font-size: 1.0625rem;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     .partnership-card__text {
-      font-size: 0.9375rem;
-      line-height: 1.65;
+      font-size: 1rem;
+      line-height: 1.7;
       color: #333;
     }
 
-    /* ── Video block ── */
+    /* ── Video / photo block ── */
     .archisnob-video {
       padding: 0 var(--pad-h);
       max-width: var(--max-w);
       margin: 64px auto;
     }
-    .archisnob-video__wrap {
-      position: relative;
-      width: 100%;
+    .archisnob-video__link {
+      display: block;
       border-radius: 12px;
       overflow: hidden;
-      aspect-ratio: 16/7;
-      background: #111;
+      line-height: 0;
     }
-    .archisnob-video__wrap iframe {
-      position: absolute;
-      inset: 0;
+    .archisnob-video__link img {
       width: 100%;
-      height: 100%;
-      border: none;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      transition: opacity 0.2s;
     }
+    .archisnob-video__link:hover img { opacity: 0.88; }
 
     /* ── Focus Areas ── */
     .focus-areas {
@@ -99,8 +98,8 @@
       margin-bottom: 24px;
     }
     .magazine-split__body {
-      font-size: 0.9375rem;
-      line-height: 1.7;
+      font-size: 1rem;
+      line-height: 1.75;
       color: #333;
     }
     .magazine-split__body p + p { margin-top: 16px; }
@@ -121,8 +120,8 @@
       margin-bottom: 24px;
     }
     .launches-section__body {
-      font-size: 0.9375rem;
-      line-height: 1.7;
+      font-size: 1rem;
+      line-height: 1.75;
       color: #333;
     }
     .launches-section__body p + p { margin-top: 16px; }
@@ -154,8 +153,8 @@
       margin-bottom: 20px;
     }
     .salon-talks__body {
-      font-size: 0.9375rem;
-      line-height: 1.7;
+      font-size: 1rem;
+      line-height: 1.75;
       color: #333;
       margin-bottom: 24px;
     }
@@ -327,17 +326,11 @@
       </div>
     </section>
 
-    <!-- ══ SALON WARSZAWSKI VIDEO ══ -->
+    <!-- ══ SALON WARSZAWSKI PHOTO ══ -->
     <div class="archisnob-video">
-      <div class="archisnob-video__wrap">
-        <!-- Replace VIDEO_ID with the actual YouTube video ID -->
-        <iframe
-          src="https://www.youtube.com/embed/videoseries?list=PLarchisnob"
-          title="Salon Warszawski"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+      <a class="archisnob-video__link" href="https://www.youtube.com/@SalonWarszawski/videos" target="_blank" rel="noopener" title="Salon Warszawski on YouTube">
+        <img src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/photo3.webp" alt="Salon Warszawski" />
+      </a>
     </div>
 
     <!-- ══ FOCUS AREAS ══ -->
@@ -357,9 +350,8 @@
         <div>
           <img
             class="magazine-split__img"
-            src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/archisnob_cover.jpg"
+            src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/photo1.webp"
             alt="ArchiSnob Magazine"
-            onerror="this.style.background='#e8e4dc';this.style.minHeight='480px';this.removeAttribute('src')"
           />
         </div>
         <div>
@@ -385,14 +377,12 @@
         <div>
           <div class="launches-section__images">
             <img
-              src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/launch_1.jpg"
+              src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/photo77.webp"
               alt="Magazine Launch event"
-              onerror="this.style.background='#d2cec8';this.removeAttribute('src')"
             />
             <img
-              src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/launch_2.jpg"
+              src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/photo79.webp"
               alt="PULSE Architecture Festival"
-              onerror="this.style.background='#c8b8b0';this.removeAttribute('src')"
             />
           </div>
         </div>
@@ -405,13 +395,14 @@
         <!-- Salon Warszawski -->
         <div>
           <h2 class="salon-talks__title">Salon Warszawski</h2>
-          <p class="salon-talks__body">Marcin Szczelina's personal show, where his two biggest passions — architecture and cooking — meet around the table. Each episode, he welcomes guests from architecture, design, and culture, preparing dishes inspired by classic Polish flavors with a modern twist. The show creates a space for thoughtful conversations about today's architecture, which Marcin loves to share. Every episode blends food and inspiring chats, offering fresh ways to see our world. SGI is the main partner for season two. You can watch it on <a href="https://www.youtube.com" target="_blank" style="text-decoration: underline;">YouTube</a>.</p>
-          <img
-            class="salon-talks__img"
-            src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/salon_warszawski.jpg"
-            alt="Salon Warszawski"
-            onerror="this.style.background='#e0d8d0';this.style.minHeight='300px';this.removeAttribute('src')"
-          />
+          <p class="salon-talks__body">Marcin Szczelina's personal show, where his two biggest passions — architecture and cooking — meet around the table. Each episode, he welcomes guests from architecture, design, and culture, preparing dishes inspired by classic Polish flavors with a modern twist. The show creates a space for thoughtful conversations about today's architecture, which Marcin loves to share. Every episode blends food and inspiring chats, offering fresh ways to see our world. SGI is the main partner for season two. You can watch it on <a href="https://www.youtube.com/@SalonWarszawski/videos" target="_blank" rel="noopener" style="text-decoration: underline;">YouTube</a>.</p>
+          <a href="https://www.youtube.com/@SalonWarszawski/videos" target="_blank" rel="noopener">
+            <img
+              class="salon-talks__img"
+              src="https://agency.wisehabit.com/data/include/cms/Agency/archisnob/photo6.webp"
+              alt="Salon Warszawski"
+            />
+          </a>
         </div>
         <!-- Talks & Conferences -->
         <div>
