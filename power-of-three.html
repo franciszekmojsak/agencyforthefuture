@@ -27,21 +27,21 @@
     }
     .pot-hero__date {
       font-size: 18px;
-      color: var(--ex-navy);
+      
       margin-bottom: 16px;
       font-weight: 500;
     }
     .pot-hero__title {
       font-size: clamp(36px, 5vw, 72px);
       font-weight: 700;
-      color: var(--ex-navy);
+      
       line-height: 1.05;
       letter-spacing: -1px;
       margin-bottom: 16px;
     }
     .pot-hero__sub {
       font-size: 20px;
-      color: var(--ex-navy);
+      
       font-weight: 400;
       opacity: 0.75;
     }
@@ -75,7 +75,7 @@
     .pot-section__heading {
       font-size: clamp(24px, 3vw, 40px);
       font-weight: 700;
-      color: var(--ex-navy);
+      
       margin-bottom: 40px;
       line-height: 1.15;
     }
@@ -157,7 +157,7 @@
     .pot-col--env .pot-card__cat      { color: var(--ex-green); }
     .pot-col--reflect .pot-card__cat  { color: var(--ex-maroon); }
 
-    .pot-card__title { font-size: 15px; font-weight: 700; color: var(--ex-navy); margin-bottom: 4px; line-height: 1.3; }
+    .pot-card__title { font-size: 15px; font-weight: 700;  margin-bottom: 4px; line-height: 1.3; }
     .pot-card__sub   { font-size: 13px; color: #555; margin-bottom: 10px; line-height: 1.4; }
     .pot-card__read  { font-size: 12px; font-weight: 600; letter-spacing: 0.05em; color: #333; }
 
@@ -200,7 +200,7 @@
       display: block;
     }
     .pot-modal__cat  { font-size: 14px; font-weight: 700; font-style: italic; margin-bottom: 10px; }
-    .pot-modal__title { font-size: clamp(22px, 3vw, 32px); font-weight: 700; color: var(--ex-navy); margin-bottom: 8px; line-height: 1.2; }
+    .pot-modal__title { font-size: clamp(22px, 3vw, 32px); font-weight: 700;  margin-bottom: 8px; line-height: 1.2; }
     .pot-modal__sub   { font-size: 16px; font-weight: 600; color: #333; margin-bottom: 20px; }
     .pot-modal__desc  { font-size: 15px; line-height: 1.75; color: #444; text-align: justify; }
     .pot-modal__logo  {
@@ -222,23 +222,23 @@
       max-width: var(--max-w);
       margin: 0 auto;
     }
-    .pot-program__title { font-size: clamp(24px, 3vw, 40px); font-weight: 700; color: var(--ex-navy); margin-bottom: 36px; }
-    .pot-day__heading   { font-size: 22px; font-weight: 700; color: var(--ex-navy); margin: 32px 0 20px; }
+    .pot-program__title { font-size: clamp(32px, 4vw, 56px); font-weight: 700; margin-bottom: 48px; }
+    .pot-day__heading   { font-size: clamp(20px, 2.5vw, 28px); font-weight: 700; margin: 48px 0 24px; }
     .pot-day__item {
       display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 24px;
-      margin-bottom: 16px;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      margin-bottom: 20px;
       align-items: start;
     }
-    .pot-day__time   { font-size: 16px; color: #555; padding-top: 16px; }
+    .pot-day__time   { font-size: 18px; color: #555; padding-top: 20px; }
     .pot-day__event  {
       border: 1.5px solid var(--ex-orange);
       border-radius: 2px;
-      padding: 14px 20px;
+      padding: 20px 28px;
     }
-    .pot-day__event-title   { font-size: 16px; font-weight: 600; color: #333; }
-    .pot-day__event-details { font-size: 13px; color: #666; margin-top: 6px; line-height: 1.5; }
+    .pot-day__event-title   { font-size: 20px; font-weight: 600; color: #333; }
+    .pot-day__event-details { font-size: 15px; color: #666; margin-top: 8px; line-height: 1.6; }
 
     /* ── Entry pass ── */
     .pot-entry {
@@ -246,25 +246,30 @@
       max-width: var(--max-w);
       margin: 0 auto;
     }
-    .pot-entry__title { font-size: clamp(20px, 2.5vw, 32px); font-weight: 700; color: var(--ex-navy); margin-bottom: 28px; }
+    .pot-entry__title { font-size: clamp(20px, 2.5vw, 32px); font-weight: 700;  margin-bottom: 28px; }
     .pot-entry__grid {
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 40px;
+      grid-template-columns: 1fr 2fr;
+      gap: 48px;
       align-items: center;
     }
     .pot-entry__logo {
       background: #000; color: #fff;
-      padding: 32px 24px;
+      padding: 48px 32px;
       text-align: center;
-      font-size: 22px; font-weight: 700;
+      font-size: 28px; font-weight: 700;
       line-height: 1.3;
       letter-spacing: 0.02em;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .pot-entry__box {
       border: 1.5px solid var(--ex-orange);
       border-radius: 2px;
-      padding: 28px 32px;
+      padding: 36px 40px;
+      background: #fff;
     }
     .pot-entry__box-title { font-size: 20px; font-weight: 600; color: #333; margin-bottom: 12px; line-height: 1.4; }
     .pot-entry__box-text  { font-size: 15px; color: #555; line-height: 1.65; margin-bottom: 20px; }
@@ -278,7 +283,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
     }
-    .pot-venue__col-title { font-size: clamp(22px, 2.5vw, 36px); font-weight: 700; color: var(--ex-navy); margin-bottom: 24px; }
+    .pot-venue__col-title { font-size: clamp(22px, 2.5vw, 36px); font-weight: 700;  margin-bottom: 24px; }
     .pot-venue__name { font-size: 22px; font-weight: 600; color: #222; margin-bottom: 12px; }
     .pot-venue__addr { font-size: 16px; color: #444; line-height: 1.8; }
     .pot-venue__contact-note { font-size: 16px; color: #444; line-height: 1.7; margin-bottom: 16px; }
@@ -413,7 +418,7 @@
     </div>
 
     <!-- ══ ABOUT ══ -->
-    <div class="pot-section pot-section--tinted">
+    <div class="pot-section">
       <h2 class="pot-section__heading">About</h2>
       <div class="pot-2col">
         <div>
@@ -441,22 +446,17 @@
       </div>
     </div>
 
-    <!-- ══ TWO EXHIBITION IMAGES ══ -->
-    <div class="pot-images">
+    <!-- ══ EXHIBITION IMAGE ══ -->
+    <div style="width:100%;overflow:hidden;">
       <img
         src="https://wisehabit.com/data/include/cms/design-businees-conference/Gala.webp"
-        alt="Wise Habit: The Power of Three — installation artwork"
-        onerror="this.style.background='#1a2060';this.style.minHeight='400px';this.removeAttribute('src')"
-      />
-      <img
-        src="https://wisehabit.com/data/include/cms/design-businees-conference/Gala.webp"
-        alt="Biblioteka Materiałów Zrównoważonych by Wise Habit — Architect@Work"
-        onerror="this.style.background='#2a2a2a';this.style.minHeight='400px';this.removeAttribute('src')"
+        alt="Wise Habit: The Power of Three — Architect@Work Warsaw"
+        style="width:100%;height:clamp(320px,40vw,600px);object-fit:cover;display:block;"
       />
     </div>
 
     <!-- ══ PANEL ══ -->
-    <div class="pot-section pot-section--tinted">
+    <div class="pot-section">
       <h2 class="pot-section__heading">Panel accompanying the Wise Habit: The Power of Three exhibition</h2>
       <div class="pot-2col">
         <div>
@@ -641,7 +641,7 @@
     </section>
 
     <!-- ══ PROGRAM ══ -->
-    <section class="pot-program pot-section--tinted" style="padding-top: 72px; padding-bottom: 72px;">
+    <section class="pot-program" style="padding-top: 72px; padding-bottom: 72px;">
       <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad-h);">
         <h2 class="pot-program__title">Program</h2>
 
@@ -674,7 +674,7 @@
     <section class="pot-entry" style="padding-top: 72px;">
       <h2 class="pot-entry__title">Entry pass</h2>
       <div class="pot-entry__grid">
-        <img src="https://wisehabit.com/data/include/cms/Media/architectatwork_tickets.webp" alt="Architect@Work ticket" style="width:100%;border-radius:4px;object-fit:cover;" />
+        <div class="pot-entry__logo">ARCHITECT<br>@WORK</div>
         <div class="pot-entry__box">
           <div class="pot-entry__box-title">Registration via<br>the Architect@Work 2026 website.</div>
           <div class="pot-entry__box-text">Get your entry pass for A@W WARSAW 2026 on May 27–28, get inspired, and discover a wide range of new products prepared for you by our exhibitors.</div>
@@ -700,6 +700,54 @@
         <a class="pot-venue__email" href="mailto:marketing@wisehabit.com">marketing@wisehabit.com</a>
       </div>
     </div>
+
+
+    <!-- ══ CONTACT FORM ══ -->
+    <section class="contact-wrap" id="contact">
+      <div class="contact-wrap__inner">
+        <p class="contact-wrap__label">contact</p>
+        <h2 class="contact-wrap__title">Get in touch</h2>
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div>
+            <p class="form-chips-label">I'm interested in</p>
+            <div class="service-chips">
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Design" /> Design</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Implementation" /> Implementation</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Product Strategy" /> Product Strategy</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="ArchiSnob" /> ArchiSnob</label>
+              <label class="service-chip"><input type="checkbox" name="service[]" value="Other" /> Other</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label for="cf-company">company</label>
+              <input type="text" id="cf-company" name="company" placeholder="Your company" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">email</label>
+            <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What can we help you with?" />
+          </div>
+          <div class="form-field">
+            <label for="cf-message">message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="cf-consent" name="consent" required />
+            <label for="cf-consent">I agree to the processing of my personal data for the purpose of responding to my inquiry.</label>
+          </div>
+          <button type="submit" class="btn btn--filled form-submit">send message →</button>
+        </form>
+      </div>
+    </section>
 
   </main>
 
@@ -764,24 +812,30 @@
   </footer>
 
   <script>
-  /* ── COLOR STRIP — exhibition palette ── */
-  const EX_COLORS = ['#0E1310','#1C3D18','#7892A3','#81ADBC','#9FA39F','#E0ADA9','#FBDDE1','#9FA39F'];
-  const SEG_W = 80, SPEED = 0.12;
+  /* ── COLOR STRIP ── */
+  const COLORS = [
+    {c:'#0E1310',w:130},{c:'#1C3D18',w:150},{c:'#7892A3',w:120},{c:'#81ADBC',w:110},{c:'#9FA39F',w:100},{c:'#E0ADA9',w:110},{c:'#FBDDE1',w:100},{c:'#9FA39F',w:110}
+  ];
+  const SPEED = 0.12;
   const strip = document.getElementById('colorStrip');
-  function buildStrip(c) {
+  let CYCLE_W = 0;
+  function buildStrip(colors) {
     strip.innerHTML = '';
-    const reps = Math.ceil((window.innerWidth * 4) / (c.length * SEG_W)) + 2;
-    for (let i = 0; i < reps * c.length; i++) {
-      const s = document.createElement('div');
-      s.className = 'color-strip__seg';
-      s.style.cssText = `width:${SEG_W}px;background:${c[i % c.length]}`;
-      strip.appendChild(s);
+    CYCLE_W = colors.reduce((s, x) => s + x.w, 0);
+    const reps = Math.ceil((window.innerWidth * 3) / CYCLE_W) + 2;
+    for (let r = 0; r < reps; r++) {
+      colors.forEach(x => {
+        const s = document.createElement('div');
+        s.className = 'color-strip__seg';
+        s.style.cssText = `width:${x.w}px;background:${x.c}`;
+        strip.appendChild(s);
+      });
     }
   }
-  buildStrip(EX_COLORS);
-  window.addEventListener('resize', () => buildStrip(EX_COLORS));
+  buildStrip(COLORS);
+  window.addEventListener('resize', () => buildStrip(COLORS));
   window.addEventListener('scroll', () => {
-    strip.style.transform = `translateX(${-(window.scrollY * SPEED) % (EX_COLORS.length * SEG_W)}px)`;
+    strip.style.transform = `translateX(${-(window.scrollY * SPEED) % CYCLE_W}px)`;
   }, { passive: true });
 
   /* ── HAMBURGER ── */

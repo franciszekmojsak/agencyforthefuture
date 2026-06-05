@@ -472,23 +472,31 @@
 
   <script>
   /* ── COLOR STRIP ── */
-  const PAGE_COLORS = ['#363C54','#414156','#455F2C','#35813F','#3C5CA9','#55926B','#CCDBDF','#A5BFCA'];
-  const SEG_W = 80, SPEED = 0.12;
+  const COLORS = [
+    {c:'#363C54',w:120},{c:'#414156',w:110},{c:'#455F2C',w:140},{c:'#35813F',w:140},{c:'#813B1B',w:90},{c:'#3C5CA9',w:110},{c:'#F47F2D',w:100},
+    {c:'#55926B',w:130},{c:'#CCDBDF',w:130},{c:'#A5BFCA',w:120},{c:'#89A8AB',w:120},
+    {c:'#0E1310',w:90},{c:'#1C3D18',w:100},{c:'#7892A3',w:90},{c:'#81ADBC',w:85},{c:'#9FA39F',w:80},{c:'#E0ADA9',w:85},{c:'#FBDDE1',w:80},{c:'#9FA39F',w:85}
+  ];
+  const SPEED = 0.12;
   const strip = document.getElementById('colorStrip');
-  function buildStrip(c) {
+  let CYCLE_W = 0;
+  function buildStrip(colors) {
     strip.innerHTML = '';
-    const reps = Math.ceil((window.innerWidth * 4) / (c.length * SEG_W)) + 2;
-    for (let i = 0; i < reps * c.length; i++) {
-      const s = document.createElement('div');
-      s.className = 'color-strip__seg';
-      s.style.cssText = `width:${SEG_W}px;background:${c[i % c.length]}`;
-      strip.appendChild(s);
+    CYCLE_W = colors.reduce((s, x) => s + x.w, 0);
+    const reps = Math.ceil((window.innerWidth * 3) / CYCLE_W) + 2;
+    for (let r = 0; r < reps; r++) {
+      colors.forEach(x => {
+        const s = document.createElement('div');
+        s.className = 'color-strip__seg';
+        s.style.cssText = `width:${x.w}px;background:${x.c}`;
+        strip.appendChild(s);
+      });
     }
   }
-  buildStrip(PAGE_COLORS);
-  window.addEventListener('resize', () => buildStrip(PAGE_COLORS));
+  buildStrip(COLORS);
+  window.addEventListener('resize', () => buildStrip(COLORS));
   window.addEventListener('scroll', () => {
-    strip.style.transform = `translateX(${-(window.scrollY * SPEED) % (PAGE_COLORS.length * SEG_W)}px)`;
+    strip.style.transform = `translateX(${-(window.scrollY * SPEED) % CYCLE_W}px)`;
   }, { passive: true });
 
   /* ── HAMBURGER ── */
