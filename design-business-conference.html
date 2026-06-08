@@ -167,7 +167,7 @@
     .dbc-spk-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 0 24px;
+      gap: 0 40px;
       margin-top: 48px;
     }
     .dbc-spk-col__title {
@@ -198,7 +198,7 @@
 
     .dbc-spk-card__img {
       width: 100%;
-      aspect-ratio: 4/3;
+      aspect-ratio: 1/1;
       object-fit: cover;
       object-position: top;
       display: block;
@@ -634,12 +634,14 @@
             </div>
           </div>
 
-          <div class="dbc-spk-card">
+          <div class="dbc-spk-card" onclick="openSpkModal('tba')">
             <img class="dbc-spk-card__img"
               src="https://wisehabit.com/data/include/cms/design-businees-conference/stay_tuned.webp"
               alt="Coming soon" />
             <div class="dbc-spk-card__body">
-              <div class="dbc-spk-card__coming">Coming soon</div>
+              <div class="dbc-spk-card__name">Stay tuned</div>
+              <div class="dbc-spk-card__role">More to come</div>
+              <div class="dbc-spk-card__read">+ READ MORE</div>
             </div>
           </div>
         </div>
@@ -659,21 +661,25 @@
             </div>
           </div>
 
-          <div class="dbc-spk-card">
+          <div class="dbc-spk-card" onclick="openSpkModal('tba')">
             <img class="dbc-spk-card__img"
               src="https://wisehabit.com/data/include/cms/design-businees-conference/stay_tuned.webp"
               alt="Coming soon" />
             <div class="dbc-spk-card__body">
-              <div class="dbc-spk-card__coming">Coming soon</div>
+              <div class="dbc-spk-card__name">Stay tuned</div>
+              <div class="dbc-spk-card__role">More to come</div>
+              <div class="dbc-spk-card__read">+ READ MORE</div>
             </div>
           </div>
 
-          <div class="dbc-spk-card">
+          <div class="dbc-spk-card" onclick="openSpkModal('tba')">
             <img class="dbc-spk-card__img"
               src="https://wisehabit.com/data/include/cms/design-businees-conference/stay_tuned.webp"
               alt="Coming soon" />
             <div class="dbc-spk-card__body">
-              <div class="dbc-spk-card__coming">Coming soon</div>
+              <div class="dbc-spk-card__name">Stay tuned</div>
+              <div class="dbc-spk-card__role">More to come</div>
+              <div class="dbc-spk-card__read">+ READ MORE</div>
             </div>
           </div>
         </div>
@@ -731,21 +737,25 @@
             </div>
           </div>
 
-          <div class="dbc-spk-card">
+          <div class="dbc-spk-card" onclick="openSpkModal('tba')">
             <img class="dbc-spk-card__img"
               src="https://wisehabit.com/data/include/cms/design-businees-conference/stay_tuned.webp"
               alt="Coming soon" />
             <div class="dbc-spk-card__body">
-              <div class="dbc-spk-card__coming">Coming soon</div>
+              <div class="dbc-spk-card__name">Stay tuned</div>
+              <div class="dbc-spk-card__role">More to come</div>
+              <div class="dbc-spk-card__read">+ READ MORE</div>
             </div>
           </div>
 
-          <div class="dbc-spk-card">
+          <div class="dbc-spk-card" onclick="openSpkModal('tba')">
             <img class="dbc-spk-card__img"
               src="https://wisehabit.com/data/include/cms/design-businees-conference/stay_tuned.webp"
               alt="Coming soon" />
             <div class="dbc-spk-card__body">
-              <div class="dbc-spk-card__coming">Coming soon</div>
+              <div class="dbc-spk-card__name">Stay tuned</div>
+              <div class="dbc-spk-card__role">More to come</div>
+              <div class="dbc-spk-card__read">+ READ MORE</div>
             </div>
           </div>
         </div>
@@ -1140,6 +1150,13 @@
       role: 'Entrepreneur & Innovation Leader',
       desc: 'Ken Wong is an entrepreneur and innovation leader with extensive experience connecting global manufacturing trends with design and business strategy.',
       img: 'https://wisehabit.com/data/include/cms/design-businees-conference/Ken_Wong.webp'
+    },
+    'tba': {
+      cat: 'Coming soon', color: '#55926B',
+      name: 'Stay tuned',
+      role: 'More to come',
+      desc: 'We are still finalising our speaker lineup. New speakers will be announced soon — stay tuned for updates.',
+      img: 'https://wisehabit.com/data/include/cms/design-businees-conference/stay_tuned.webp'
     }
   };
 
