@@ -19,47 +19,38 @@
     /* ── Page wrapper ── */
     .pot-page { background: var(--bg); color: #222; }
 
-    /* ── Hero ── */
-    .pot-hero {
-      padding: clamp(80px, 12vw, 160px) var(--pad-h) 60px;
+    /* ── Hero + Intro combined grid ── */
+    .pot-hero-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      padding: clamp(80px, 12vw, 160px) var(--pad-h) 80px;
       max-width: var(--max-w);
       margin: 0 auto;
+      align-items: start;
     }
     .pot-hero__date {
       font-size: 18px;
-      
       margin-bottom: 16px;
       font-weight: 500;
     }
     .pot-hero__title {
       font-size: clamp(36px, 5vw, 72px);
       font-weight: 700;
-      
       line-height: 1.05;
       letter-spacing: -1px;
       margin-bottom: 16px;
     }
     .pot-hero__sub {
       font-size: 20px;
-      
       font-weight: 400;
       opacity: 0.75;
     }
-
-    /* ── Intro split: text + image ── */
-    .pot-intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      padding: 0 var(--pad-h) 80px;
-      max-width: var(--max-w);
-      margin: 0 auto;
-      align-items: start;
-    }
+    .pot-intro__text { margin-top: 40px; }
     .pot-intro__text p { font-size: 18px; line-height: 1.8; color: #333; margin-bottom: 20px; }
     .pot-intro__img {
       width: 100%;
-      aspect-ratio: 4/3;
+      aspect-ratio: 1/1;
       object-fit: cover;
       border-radius: 4px;
       background: #e8e4dc;
@@ -291,7 +282,7 @@
 
     /* ── Responsive ── */
     @media (max-width: 1000px) {
-      .pot-intro,
+      .pot-hero-intro,
       .pot-2col,
       .pot-venue { grid-template-columns: 1fr; gap: 40px; }
       .pot-projects__cols { grid-template-columns: repeat(2, 1fr); }
@@ -299,7 +290,7 @@
       .pot-modal__img { max-height: 260px; }
     }
     @media (max-width: 640px) {
-      .pot-hero, .pot-intro, .pot-section, .pot-projects, .pot-program, .pot-entry, .pot-venue { padding-left: 20px; padding-right: 20px; }
+      .pot-hero-intro, .pot-section, .pot-projects, .pot-program, .pot-entry, .pot-venue { padding-left: 20px; padding-right: 20px; }
       .pot-projects__cols { grid-template-columns: 1fr; }
       .pot-images { grid-template-columns: 1fr; }
       .pot-day__item { grid-template-columns: 1fr; gap: 8px; }
@@ -395,21 +386,18 @@
 
   <main class="page-content pot-page">
 
-    <!-- ══ HERO ══ -->
-    <section class="pot-hero">
-      <p class="pot-hero__date">27–28 May 2026, Warsaw</p>
-      <h1 class="pot-hero__title">Wise Habit: The Power of Three</h1>
-      <p class="pot-hero__sub">Architect@Work Warsaw 2026 · Reflection</p>
-    </section>
-
-    <!-- ══ INTRO: text + main image ══ -->
-    <div class="pot-intro">
-      <div class="pot-intro__text">
-        <p>Wise Habit: The Power of Three is a curatorial installation presented at Architect@Work Warsaw 2026 (27–28 May 2026).</p>
-        <p>The exhibition explores the relationship between sustainability, ethical design and crisis, using the symbolism of the number three as both a narrative and spatial framework. Through images, sound and samples of innovative materials, the exhibition invites reflection on the future of architecture and responsible design.</p>
-        <p>This is a place to talk about the future as something that happens between us.</p>
+    <!-- ══ HERO + INTRO ══ -->
+    <div class="pot-hero-intro">
+      <div>
+        <p class="pot-hero__date">27–28 May 2026, Warsaw</p>
+        <h1 class="pot-hero__title">Wise Habit<br>The Power of Three</h1>
+        <p class="pot-hero__sub">Architect@Work Warsaw 2026 · Reflection</p>
+        <div class="pot-intro__text">
+          <p>Wise Habit: The Power of Three is a curatorial installation presented at Architect@Work Warsaw 2026 (27–28 May 2026).</p>
+          <p>The exhibition explores the relationship between sustainability, ethical design and crisis, using the symbolism of the number three as both a narrative and spatial framework. Through images, sound and samples of innovative materials, the exhibition invites reflection on the future of architecture and responsible design.</p>
+          <p>This is a place to talk about the future as something that happens between us.</p>
+        </div>
       </div>
-      <!-- Main exhibition image — replace src with actual path -->
       <img class="pot-intro__img"
         src="https://wisehabit.com/data/include/cms/design-businees-conference/small_kolaz_WH_A_W_2026_gradient2-1.webp"
         alt="Wise Habit: The Power of Three — exhibition artwork"
