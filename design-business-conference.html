@@ -10,11 +10,11 @@
     /* ── DBC palette ── */
     :root {
       --dbc-navy:    #111111;
-      --dbc-hosts:   #C8602A;
-      --dbc-design:  #C0392B;
-      --dbc-product: #1C7A5A;
-      --dbc-manuf:   #8B3A1A;
-      --dbc-accent:  #C8602A;
+      --dbc-hosts:   #55926B;
+      --dbc-design:  #89A8AB;
+      --dbc-product: #A5BFCA;
+      --dbc-manuf:   #CCDBDF;
+      --dbc-accent:  #55926B;
     }
 
     /* ── Page wrapper ── */
@@ -167,15 +167,15 @@
     .dbc-spk-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
+      gap: 0 24px;
       margin-top: 48px;
     }
     .dbc-spk-col__title {
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 700;
       margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid currentColor;
+      padding-bottom: 12px;
+      border-bottom: 3px solid currentColor;
     }
     .dbc-col--hosts .dbc-spk-col__title   { color: var(--dbc-hosts); }
     .dbc-col--design .dbc-spk-col__title  { color: var(--dbc-design); }
@@ -198,16 +198,17 @@
 
     .dbc-spk-card__img {
       width: 100%;
-      aspect-ratio: 1/1;
+      aspect-ratio: 4/3;
       object-fit: cover;
       object-position: top;
       display: block;
+      background: #e0dbd5;
     }
-    .dbc-spk-card__body { padding: 12px 14px 14px; }
-    .dbc-spk-card__name { font-size: 14px; font-weight: 700; margin-bottom: 2px; color: #222; }
-    .dbc-spk-card__role { font-size: 12px; color: #555; margin-bottom: 10px; line-height: 1.4; }
+    .dbc-spk-card__body { padding: 14px 16px 16px; }
+    .dbc-spk-card__name { font-size: 15px; font-weight: 700; margin-bottom: 4px; line-height: 1.3; color: #222; }
+    .dbc-spk-card__role { font-size: 13px; color: #555; margin-bottom: 10px; line-height: 1.4; }
     .dbc-spk-card__read { font-size: 12px; font-weight: 600; letter-spacing: 0.05em; color: #333; }
-    .dbc-spk-card__coming { font-size: 13px; font-weight: 600; color: var(--dbc-accent); margin-bottom: 6px; }
+    .dbc-spk-card__coming { font-size: 13px; font-weight: 700; color: var(--dbc-accent); margin-bottom: 6px; }
     .dbc-col--hosts .dbc-spk-card__name  { color: var(--dbc-hosts); }
     .dbc-col--design .dbc-spk-card__name { color: var(--dbc-design); }
 
@@ -217,35 +218,39 @@
       max-width: var(--max-w);
       margin: 0 auto;
     }
+    .dbc-prog__title {
+      font-size: clamp(32px, 4vw, 56px);
+      font-weight: 700;
+      margin-bottom: 48px;
+    }
     .dbc-prog__date {
-      font-size: 17px;
+      font-size: clamp(20px, 2.5vw, 28px);
       font-weight: 700;
       color: var(--dbc-navy);
-      margin: 24px 0 20px;
+      margin: 48px 0 24px;
     }
     .dbc-prog__block-title {
-      font-size: 17px;
+      font-size: clamp(20px, 2.5vw, 28px);
       font-weight: 700;
       color: var(--dbc-navy);
-      margin: 36px 0 16px;
+      margin: 48px 0 24px;
     }
     .dbc-prog__row {
       display: grid;
-      grid-template-columns: 130px 1fr;
-      gap: 20px;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
       align-items: start;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .dbc-prog__time {
-      font-size: 14px;
-      color: #666;
-      padding-top: 17px;
-      font-variant-numeric: tabular-nums;
+      font-size: 18px;
+      color: #555;
+      padding-top: 20px;
     }
     .dbc-prog__box {
       border: 1.5px solid var(--dbc-accent);
       border-radius: 8px;
-      padding: 14px 20px;
+      padding: 20px 28px;
     }
     .dbc-prog__box--toggle {
       cursor: pointer;
@@ -257,18 +262,18 @@
       align-items: center;
       gap: 12px;
     }
-    .dbc-prog__box-title { font-size: 16px; font-weight: 600; color: #222; }
-    .dbc-prog__box-note  { font-size: 13px; color: #888; margin-top: 3px; }
-    .dbc-prog__box-plus  { font-size: 20px; color: #999; flex-shrink: 0; transition: transform 0.2s; }
+    .dbc-prog__box-title { font-size: 20px; font-weight: 600; color: #333; }
+    .dbc-prog__box-note  { font-size: 15px; color: #666; margin-top: 8px; line-height: 1.6; }
+    .dbc-prog__box-plus  { font-size: 22px; color: #999; flex-shrink: 0; transition: transform 0.2s; }
     .dbc-prog__box.open .dbc-prog__box-plus { transform: rotate(45deg); }
     .dbc-prog__box-content {
       display: none;
       margin-top: 10px;
       padding-top: 10px;
       border-top: 1px solid #eee;
-      font-size: 14px;
-      color: #555;
-      line-height: 1.7;
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
     }
     .dbc-prog__box.open .dbc-prog__box-content { display: block; }
 
@@ -365,8 +370,8 @@
       .dbc-hero-intro, .dbc-section, .dbc-prog, .dbc-img-pair, .dbc-img-full,
       .dbc-bottom__inner { padding-left: 20px; padding-right: 20px; }
       .dbc-spk-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .dbc-prog__row { grid-template-columns: 1fr; gap: 6px; }
-      .dbc-prog__time { padding-top: 0; }
+      .dbc-prog__row { grid-template-columns: 1fr; gap: 8px; }
+      .dbc-prog__time { padding-top: 0; font-size: 15px; }
       .dbc-events-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
@@ -772,7 +777,7 @@
 
     <!-- ══ PROGRAM ══ -->
     <div class="dbc-prog">
-      <h2 class="dbc-section__heading">Program</h2>
+      <h2 class="dbc-prog__title">Program</h2>
       <p class="dbc-prog__date">16–17.09.2026</p>
 
       <div class="dbc-prog__row">
